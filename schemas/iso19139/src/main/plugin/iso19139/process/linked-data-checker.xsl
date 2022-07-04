@@ -43,6 +43,8 @@
     <msg id="b" xml:lang="dut">). Functie verwijdert de link.</msg>
     <msg id="a" xml:lang="ita"> ritorna un errore (</msg>
     <msg id="b" xml:lang="ita">). Lancia questo processo per eliminarlo.</msg>
+    <msg id="a" xml:lang="rus"> возвращает ошибку (</msg>
+    <msg id="b" xml:lang="rus">). Запустите задачу для удаления ссылки.</msg>
   </xsl:variable>
 
   <xsl:template name="list-linked-data-checker">

@@ -30,6 +30,7 @@
   <version>2.0.2</version>
   <appMinorVersionSupported>3.4.0</appMinorVersionSupported>
   <title xml:lang="en">Dublin core (for CSW only)</title>
+  <title xml:lang="ru">"Дублинское ядро" (только для CSW)</title>
   <schemaLocation>http://www.opengis.net/cat/csw/2.0.2
     http://schemas.opengis.net/csw/2.0.2/CSW-discovery.xsd
   </schemaLocation>

@@ -51,6 +51,9 @@ INSPIRE-thema (s) gevonden. Voer deze taak uit om een topologische consistentie 
     <msg id="a" xml:lang="ita">Trovato un tema INSPIRE. 
         Lancia questo processo per aggiungere l'elemento di consistenza topologica.
     </msg>
+    <msg id="a" xml:lang="rus">Найдена тема INSPIRE. Запустите задачу, чтобы добавить 
+       раздел описания топологии INSPIRE.
+    </msg>
   </xsl:variable>
 
   <xsl:variable name="inspire-thesaurus-dq-topo"

@@ -21,7 +21,78 @@
   ~ Contact: Jeroen Ticheler - FAO - Viale delle Terme di Caracalla 2,
   ~ Rome - Italy. email: geonetwork@osgeo.org
   -->
-
-<codelists/>
+<codelists>
+  <codelist name="gmd:CI_RoleCode" alias="roleCode">
+    <entry>
+      <code>resourceProvider</code>
+      <label>Поставщик ресурса</label>
+      <description>Субъект, который поставляет данные</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>custodian</code>
+      <label>Хранитель</label>
+      <description>Субъект, который принимает на себя ответственность за данные и гарантирует их должное хранение
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>owner</code>
+      <label>Владелец</label>
+      <description>Владелец данных</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>user</code>
+      <label>Пользователь</label>
+      <description>Субъект, который использует данные</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>distributor</code>
+      <label>Распространитель</label>
+      <description>Субъект, который распространяет данные</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>originator</code>
+      <label>Создатель</label>
+      <description>Субъект, который создает данные</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>pointOfContact</code>
+      <label>Контактное лицо</label>
+      <description>Субъект, владеющий сведениями о данных или способах их приобретения
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>principalInvestigator</code>
+      <label>Главный исследователь</label>
+      <description>Субъект, ответственный за сбор информации и проведение испытаний
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>processor</code>
+      <label>Обработчик</label>
+      <description>Субъект, который обрабатывает данные, внося в них изменения
+      </description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>publisher</code>
+      <label>Издатель</label>
+      <description>Субъект, который публикует (издает) данные</description>
+    </entry>
+    <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
+    <entry>
+      <code>author</code>
+      <label>Автор</label>
+      <description>Субъект, который является автором данных</description>
+    </entry>
+  </codelist>
+</codelists>
 
 

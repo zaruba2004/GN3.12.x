@@ -49,6 +49,9 @@
     <msg id="a" xml:lang="ita">Trovato un tema INSPIRE. 
         Lancia questo processo per aggiungere l'elemento di conformità INSPIRE.
     </msg>
+    <msg id="a" xml:lang="rus">Найдена тема INSPIRE. Запустите задачу, чтобы добавить 
+      раздел соответствия INSPIRE.
+    </msg>
   </xsl:variable>
 
 

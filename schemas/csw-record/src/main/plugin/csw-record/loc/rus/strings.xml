@@ -23,6 +23,6 @@
   -->
 
 <strings>
-  <xml_csw-record>Save this metadata as a CSW Discovery XML file</xml_csw-record>
-  <xml_csw-recordTooai_dc>Save this metadata as an OAI Dublin Core XML file</xml_csw-recordTooai_dc>
+  <xml_csw-record>Сохранить метаданные как XML-файл CSW</xml_csw-record>
+  <xml_csw-recordTooai_dc>Сохранить метаданные как OAI-архив "Дублинского ядра"</xml_csw-recordTooai_dc>
 </strings>

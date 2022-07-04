@@ -23,10 +23,10 @@
   -->
 
 <strings>
-  <xml_iso19110>Save this metadata as an ISO19110 XML file</xml_iso19110>
-  <xml_iso19110Tooai_dc>Save this metadata as an OAI Dublin Core XML file</xml_iso19110Tooai_dc>
+  <xml_iso19110>Сохранить метаданные как XML-файл ISO19110</xml_iso19110>
+  <xml_iso19110Tooai_dc>Сохранить метаданные как OAI-архив "Дублинского ядра"</xml_iso19110Tooai_dc>
 
-  <advanced>Full</advanced>
-  <default>Simple</default>
+  <advanced>Детальный вид</advanced>
+  <default>Сокращенный вид</default>
   <xml>XML</xml>
 </strings>

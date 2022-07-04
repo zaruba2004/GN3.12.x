@@ -7,6 +7,7 @@
   <version>1.0</version>
   <appMinorVersionSupported>3.5.0</appMinorVersionSupported>
   <title xml:lang="en">Geographic information &#45;&#45; Metadata</title>
+  <title xml:lang="ru">Географическая информация &#45;&#45; Метаданные</title>
   <title xml:lang="fr">Information géographique &#45;&#45; Métadonnées</title>
   <description xml:lang="en"><![CDATA[
 The objective of ISO 19115 is to provide a model for describing information or resources
@@ -56,6 +57,47 @@ Example of catalogues using this standard:
 
 
   ]]></description>
+
+  <description xml:lang="ru"><![CDATA[
+Цель ISO 19115 - предоставить модель для описания информации или ресурсов, имеющих, как правило, географическую
+протяженность. Эта часть ISO 19115 предназначена для использования в информационных системах аналитиков,
+специалистов по планированию, для разработчиков информационных систем, а также других лиц для определения
+основных принципов и требований к стандартизированному описанию информационных ресурсов. Эта часть
+ISO 19115 определяет элементы метаданных, их свойства и отношения между элементами, устанавливает
+общий набор терминологии, определений и расширений метаданных.
+
+Хотя основная цель этой части ISO 19115 - описать цифровую информацию, имеющую географическую протяженность,
+ее можно использовать для описания всех типов ресурсов, включая текстовые документы, инициативы, программное обеспечение,
+датчики, негеографическую информацию, спецификации продуктов и репозитории, т.е. его можно использовать для описания
+информационных ресурсов, не имеющих географической протяженности. Некоторые домены имеют свои собственные стандарты
+метаданных, например Dublin Core для библиотек. При необходимости такие стандарты и эта часть ISO 19115 могут быть
+использованы для создания специальных профилей метаданных.
+
+Эта схема также включает:
+
+- Описание данных изображений (в соответствии с ISO19115-2)
+- Встраивание в метаданные модели данных (каталоги объектов) (в соответствии с ISO19110)
+- Описание качества данных (в соответствии с ISO19157)
+
+
+Больше информации:
+
+- `Использование последнего стандарта ISO для географической информации (ISO19115-1) для INSPIRE Discovery Service <http://cnig.gouv.fr/wp-content/uploads/2015/06/titellus_fx_prunayre_iso19115-3_inspire2015.pdf>`
+
+Этот стандарт поддерживается на https://github.com/metadata101/iso19115-3.2018.
+и доступен по умолчанию в GeoNetwork 3.8+. TC211 поддерживает XSD для этого стандарта на https://github.com/ISO-TC211/XML.
+
+
+Примеры каталогов, использующих этот стандарт:
+
+- `Metawal - Каталог для географической информации Валлонии <http://metawal.wallonie.be/>` _ использует ISO19115-3 в качестве стандарта по умолчанию для всех записей. Основные преимущества: категоризация связанных документов (например, онлайн-источники, отчеты DQ, стили ГИС, модели данных), лучшее описание организации / сторон и ролей, сохранение соответствия директиве INSPIRE за счет преобразования в ISO19139 через CSW.
+.. figure:: img/metawal-tramedesaxes.png
+
+- `Sextant - Контрольно-пропускные пункты <https://sextant.ifremer.fr/>` _ использует ISO19115-3 для описания качества информации спецификаций / продуктов и исходных данных.
+.. figure:: img/sextant-checkpoint.png
+
+  ]]></description>
+  
   <description xml:lang="fr"><![CDATA[
 L’objectif de l’ISO 19115 est de fournir un modèle destiné à décrire des informations
 ou des ressources pouvant avoir des étendues géographiques. Cette partie de l’ISO 19115 est destinée à être utilisée, entre autres, par des analystes de systèmes d’informations, des planificateurs de programmes et des développeurs de systèmes d’informations, dans le but de définir des principes de base et des exigences permettant d’établir une description normalisée des ressources d’informations.

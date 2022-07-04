@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <strings>
-  <notfound>Metatietoja ei löydy.</notfound>
-  <notowner>Et voi poistaa metatietoja, koska et ole niiden omistaja.</notowner>
-  <updated>Metatiedot poistettu.</updated>
+  <notfound>Метаданные не могут быть найдены</notfound>
+  <notowner>Вы не можете удалять метаданные, потому что Вы не являетесь их владельцем</notowner>
+  <updated>Метаданные удалены</updated>
 </strings>

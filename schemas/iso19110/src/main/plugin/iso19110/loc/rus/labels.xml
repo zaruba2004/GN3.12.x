@@ -29,232 +29,333 @@
         xmlns:gmd="http://www.isotc211.org/2005/gmd">
 
   <element name="gfc:FC_FeatureCatalogue">
-    <label>Feature Catalogue description</label>
-    <description></description>
+    <label>Каталог пространственных объектов</label>
+    <description>Описание каталога пространственных объектов</description>
   </element>
   <element name="gfc:FC_FeatureAttribute">
-    <label>Attribute</label>
+    <label>Атрибут</label>
   </element>
   <element name="gfc:name">
-    <label>Name</label>
-    <description>Feature catalogue name</description>
+    <label>Наименование</label>
+    <description>Наименование каталога объектов</description>
+  </element>
+  <element name="gco:range">
+    <label>Кардинальность</label>
+    <description></description>
   </element>
   <element name="gfc:scope">
-    <label>Scope</label>
-    <description>Scope definition</description>
+    <label>Состав</label>
+    <description>Перечень типов (доменов) объектов</description>
   </element>
   <element name="gfc:versionNumber">
-    <label>Version</label>
-    <description>Catalogue version</description>
+    <label>Номер версии</label>
+    <description>Номер версии каталога</description>
   </element>
   <element name="gfc:versionDate">
-    <label>Date</label>
-    <description>Catalogue date</description>
+    <label>Дата версии</label>
+    <description>Дата вступления в силу каталога</description>
   </element>
   <element name="gfc:producer">
-    <label>Catalogue producer</label>
-    <description>Catalogue responsible</description>
+    <label>Автор каталога</label>
+    <description>Автор каталога</description>
   </element>
   <element name="gfc:featureType">
-    <label>Property description</label>
-    <description>Property description</description>
+    <label>Типы и характеристики</label>
+    <description>Описание типов объктов и их характеристик</description>
   </element>
   <element name="gfc:isAbstract">
-    <label>Abstract</label>
-    <description>Is this element an abstract element ?</description>
+    <label>Абстракция</label>
+    <description>Является ли элемент абстракцией ?</description>
   </element>
   <element name="gfc:FC_FeatureType">
-    <label>Attribute table description</label>
-    <description>Attribute table description</description>
+    <label>Тип объекта</label>
+    <description>Описание типа объекта</description>
   </element>
   <element name="gfc:typeName">
-    <label>Property name</label>
+    <label>Название</label>
     <description></description>
   </element>
   <element name="gfc:carrierOfCharacteristics">
-    <label>Elements</label>
-    <description>Association, attribute, operation, ...</description>
+    <label>Характеристики</label>
+    <description>Связь, атрибут, операция, ...</description>
   </element>
   <element name="gfc:definition">
-    <label>Definition</label>
-    <description>Property definition</description>
+    <label>Определение</label>
+    <description>Определение типа пространственного объекта</description>
   </element>
   <element name="gfc:fieldOfApplication">
-    <label>Field of application</label>
-    <description>Field of application</description>
+    <label>Область применения</label>
+    <description>Область применения</description>
   </element>
   <element name="gmd:responsibleParty">
-    <label>Responsible party</label>
-    <description>Responsible party</description>
+    <label>Ответственная сторона</label>
+    <description>Ответственная сторона</description>
   </element>
   <element name="gmd:CI_ResponsibleParty">
-    <label>Responsible party</label>
-    <description>Responsible party</description>
+    <label>Ответственная сторона</label>
+    <description>Ответственная сторона</description>
   </element>
   <element name="gco:lower">
-    <label>Lower cardinality</label>
-    <description>Lower cardinality</description>
+    <label>Min</label>
+    <description>Минимальная кардинальность</description>
   </element>
   <element name="gco:upper">
-    <label>Upper cardinality</label>
-    <description>Upper cardinality</description>
+    <label>Max</label>
+    <description>Максимальная кардинальность</description>
   </element>
   <element name="gfc:cardinality">
-    <label>Cardinalities</label>
-    <description>Cardinalities</description>
+    <label>Кардинальность</label>
+    <description>Допустимое число значений</description>
   </element>
   <element name="gfc:label">
-    <label>Label</label>
+    <label>Название</label>
     <description/>
   </element>
   <element name="gfc:listedValue">
-    <label>Codelist</label>
-    <description>List of values for this element.</description>
+    <label>Список значений</label>
+    <description>Список возможных значений элемента</description>
   </element>
   <element name="gfc:constrainedBy">
-    <label>Constrained by</label>
+    <label>Ограничения</label>
     <description></description>
   </element>
   <element name="gfc:definitionReference">
-    <label>Definition reference</label>
+    <label>Ссылка на определение</label>
     <description></description>
   </element>
   <element name="gfc:code">
-    <label>Code</label>
+    <label>Код</label>
     <description></description>
   </element>
   <element name="gfc:isOrdered">
-    <label>Is ordered</label>
+    <label>Перечисляемый тип ?</label>
     <description></description>
   </element>
   <element name="gfc:isNavigable">
-    <label>Is navigable</label>
+    <label>Индексированное поле ?</label>
     <description></description>
   </element>
   <element name="gfc:roleType">
-    <label>Role type</label>
+    <label>Вид роли</label>
     <description></description>
   </element>
   <element name="gfc:inheritsFrom">
-    <label>Inherits from</label>
+    <label>Наследник</label>
     <description></description>
   </element>
   <element name="gfc:inheritsTo">
-    <label>Inherits to</label>
+    <label>Наследует</label>
+    <description></description>
+  </element>
+  <element name="gfc:FC_DefinitionReference">
+    <label>Ссылка на источник</label>
     <description></description>
   </element>
   <element name="gfc:FC_InheritanceRelation">
-    <label>Heritance relation</label>
+    <label>Наследственное отношение</label>
     <description></description>
   </element>
   <element name="gfc:functionalLanguage">
-    <label>Functional language</label>
+    <label>Рабочий язык</label>
     <description></description>
   </element>
   <element name="gfc:definitionSource">
-    <label>Definition source</label>
+    <label>Источник</label>
     <description></description>
   </element>
   <element name="gfc:FC_FeatureOperation">
-    <label>Feature operation</label>
+    <label>Операция</label>
     <description></description>
   </element>
   <element name="gfc:FC_FeatureAssociation">
-    <label>Feature association</label>
+    <label>Связи</label>
     <description></description>
   </element>
   <element name="gfc:FC_AssociationRole">
-    <label>Association role</label>
+    <label>Связь</label>
     <description></description>
   </element>
   <element name="gfc:FC_RoleType">
-    <label>Role type</label>
+    <label>Вид роли</label>
     <description></description>
   </element>
   <element name="gfc:description">
-    <label>Description</label>
+    <label>Описание</label>
     <description></description>
   </element>
   <element name="gfc:aliases">
-    <label>Aliases</label>
+    <label>Псевдонимы</label>
     <description></description>
   </element>
   <element name="gfc:FC_ListedValue">
-    <label>Codelist</label>
+    <label>Список значений</label>
     <description></description>
   </element>
   <element name="gfc:valueType">
-    <label>Value type</label>
+    <label>Тип значения</label>
     <description></description>
   </element>
   <element name="gfc:memberName">
-    <label>Member name</label>
+    <label>Название</label>
     <description></description>
   </element>
   <element name="gfc:FC_Constraint">
-    <label>Constraint</label>
+    <label>Ограничение</label>
     <description></description>
   </element>
   <element name="gfc:uniqueInstance">
-    <label>Unique instance</label>
+    <label>Уникальная сущность</label>
     <description></description>
   </element>
   <element name="gfc:type">
-    <label>Type</label>
+    <label>Тип</label>
     <description></description>
   </element>
   <element name="gfc:relation">
-    <label>Relation</label>
+    <label>Связь</label>
     <description></description>
   </element>
   <element name="gfc:featureCatalogue">
-    <label>Feature catalogue</label>
+    <label>Каталог объектов</label>
     <description></description>
   </element>
   <element name="gfc:roleName">
-    <label>Role name</label>
+    <label>Роль</label>
     <description></description>
   </element>
   <element name="gfc:signature">
-    <label>Signature</label>
+    <label>Сигнатура</label>
     <description></description>
   </element>
   <element name="gfc:formalDefinition">
-    <label>Formal definition</label>
+    <label>Определение</label>
     <description></description>
   </element>
   <element name="gfc:triggeredByValueOf">
-    <label>Triggered by value of</label>
+    <label>Срабатывает по значению</label>
     <description></description>
   </element>
   <element name="gfc:affectsValueOf">
-    <label>Affects value of</label>
+    <label>Влияет на значение</label>
   </element>
   <element name="gfc:observesValueOf">
-    <label>Observes value of</label>
+    <label>Наблюдается значение</label>
   </element>
   <element name="gfc:valueMeasurementUnit">
-    <label>Value measurement unit</label>
+    <label>Единица измерения</label>
+  </element>
+  <element name="gfc:FC_Binding">
+    <label>Операция глобальная</label>
+  </element>
+  <element name="gfc:FC_BoundFeatureAttribute">
+    <label>Атрибут глобальный</label>
+  </element>
+  <element name="gfc:FC_BoundAssociationRole">
+    <label>Роль связи глобальная</label>
+  </element>
+  <element name="isInfinite">
+      <label>Бесконечный</label>
+  </element>
+  <element name="xsi:nil">
+      <label>Nill</label>
+  </element>
+  <element name="codeSpace">
+      <label>Кодовое пространство</label>
+  </element>
+  <element name="gfc:globalProperty">
+    <label>Глобальные характеристики</label>
+  </element>  
+  <element name="gfc:inheritanceRelation">
+    <label>Связь наследования</label>
+  </element>   
+  <element name="gco:CharacterString">
+    <label>Текст</label>
+    <description></description>
+  </element>
+  <element name="gmx:Anchor">
+    <label>Якорь ссылки</label>
+    <description></description>
+  </element>
+  <element name="gmx:FileName">
+    <label>Название файла</label>
+    <description></description>
   </element>
   <!-- ==================================================== -->
   <element name="gmx:name">
-    <label>Name</label>
-    <description>Feature catalogue name</description>
+    <label>Название</label>
+    <description>Название каталога объектов местности</description>
   </element>
   <element name="gmx:scope">
-    <label>Scope</label>
-    <description>Scope definition</description>
+    <label>Содержание</label>
+    <description>Описание состава каталога</description>
   </element>
+   <element name="gmx:language">
+    <label>Язык</label>
+    <description>Язык каталога</description>
+  </element>
+   <element name="gmx:CT_CodelistCatalogue">
+    <label>Классификатор</label>
+    <description>Классификатор, кодификатор каталога</description>
+  </element>  
+   <element name="gmx:CT_CrsCatalogue">
+    <label>Список СК</label>
+    <description>Список систем координат каталога</description>
+  </element>   
+   <element name="gmx:CT_UomCatalogue">
+    <label>Единицы измерения</label>
+    <description>Список единиц измерения каталога</description>
+  </element>   
+
   <element name="gmx:versionNumber">
-    <label>Version</label>
-    <description>Catalogue version</description>
+    <label>Версия</label>
+    <description>Версия каталога</description>
   </element>
   <element name="gmx:versionDate">
-    <label>Date</label>
-    <description>Catalogue date</description>
+    <label>Дата</label>
+    <description>Дата каталога</description>
   </element>
   <element name="gmx:fieldOfApplication">
-    <label>Field of application</label>
-    <description>Field of application</description>
+    <label>Область применения</label>
+    <description>Область применения каталога</description>
+  </element>
+
+  <element name="gco:nilReason">
+    <label>Нет сведений</label>
+    <description/>
+    <help/>
+    <condition/>
+  </element>
+  <element name="xlink:href">
+      <label>Ссылка</label>
+  </element>
+
+  <element name="gfc:observesValuesOf">
+    <label>Зависит от</label>
+    <description></description>
+  </element>  
+  <element name="gfc:affectsValuesOf">
+    <label>Влияет на</label>
+    <description></description>
+  </element>    
+  <element name="gfc:triggeredByValuesOf">
+    <label>Запускается от</label>
+    <description></description>
+  </element>  
+  <element name="gmx:locale">
+    <label>Другой язык</label>
+    <description>Указание другого языка в случае подготовки мультиязычных метаданных</description>
+  </element>
+  <element name="gmx:characterSet">
+    <label>Кодировка</label>
+    <description>Языковые параметры</description>
+  </element>
+  <element name="gmx:subCatalogue">
+    <label>Подкаталог</label>
+    <description>Ссылка на подкаталог пространственных объектов</description>
+  </element>
+  <element name="gmx:versionDate">
+    <label>Дата версии</label>
+    <btnLabel>Дата</btnLabel>
+    <description>Дата верси</description>
   </element>
 </labels>

@@ -23,15 +23,15 @@
   -->
 
 <strings>
-  <xml_dublin-core>Save this metadata as a Dublin Core XML file</xml_dublin-core>
-  <xml_dublin-coreTooai_dc>Save this metadata as an OAI Dublin Core XML file
+  <xml_dublin-core>Сохранить метаданные как XML-файл "Дублинского ядра"</xml_dublin-core>
+  <xml_dublin-coreTooai_dc>Сохранить метаданные как OAI-архив "Дублинского ядра"
   </xml_dublin-coreTooai_dc>
 
   <xml>XML</xml>
-  <default>Simple</default>
-  <advanced>Full</advanced>
-
-  <providedBy>Provided by</providedBy>
-  <shareOnSocialSite>Share on social sites</shareOnSocialSite>
-  <associatedResources>Associated resources</associatedResources>
+  <default>Сокращенный вид</default>
+  <advanced>Детальный вид</advanced>
+  
+  <providedBy>Предоставлен</providedBy>
+  <shareOnSocialSite>Опубликовать в соцсетях</shareOnSocialSite>
+  <associatedResources>Связанные ресурсы</associatedResources>
 </strings>

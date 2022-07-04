@@ -7,17 +7,17 @@
   </schemaTronError>
   <schemaTronValid>Несоответствий выбранному формату не найдено</schemaTronValid>
   <schemaTronReport>Отчет о проверке доступен здесь</schemaTronReport>
-  <invalidElement>Invalid element. Invalid content was found starting with element:</invalidElement>
-  <onElementOf>One of the following elements</onElementOf>
-  <isExpected>is expected.</isExpected>
-  <isNotComplete>is not complete.</isNotComplete>
-  <elementLocated>Parent element is</elementLocated>
-  <missingElement>Missing element. The content of element:</missingElement>
-  <invalidValue>Invalid or missing value.</invalidValue>
-  <notValidFor>is not a valid value for</notValidFor>
-  <xsdErrorIs>XSD error is:</xsdErrorIs>
-  <inElement>in element</inElement>
-  <enum1>Value</enum1>
-  <enum2>is not valid for the field</enum2>
-  <enum3>List of values is :</enum3>
+  <invalidElement>Неверный элемент. Неверное содержание начинается с элемента: </invalidElement>
+  <onElementOf>Один из следующих элементов</onElementOf>
+  <isExpected>ожидается. </isExpected>
+  <isNotComplete>не завершен. </isNotComplete>
+  <elementLocated>Родительский элемент: </elementLocated>
+  <missingElement>Пропущен элемент. Содержание этого элемента: </missingElement>
+  <invalidValue>Неверное или пропущенное значение. </invalidValue>
+  <notValidFor> - недопустимое значение для</notValidFor>
+  <xsdErrorIs>XSD-ошибка: </xsdErrorIs>
+  <inElement>в элементе</inElement>
+  <enum1>Значение</enum1>
+  <enum2>не верно для этого поля</enum2>
+  <enum3>Список значений: </enum3>
 </strings>

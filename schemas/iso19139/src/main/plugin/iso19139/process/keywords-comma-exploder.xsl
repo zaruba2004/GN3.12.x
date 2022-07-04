@@ -44,6 +44,9 @@
     <msg id="a" xml:lang="ita">Un campo di parola chiave contiene "," (es.</msg>
     <msg id="b" xml:lang="ita">). Lancia questo processo per scindere queste parole chiavi </msg>
     <msg id="c" xml:lang="ita">e</msg>
+    <msg id="a" xml:lang="rus">В ключевом поле есть перечисление через ","</msg>
+    <msg id="b" xml:lang="rus">Запустите задачу, чтобы разделить на отдельные ключевые слова.</msg>
+    <msg id="c" xml:lang="rus">и</msg>
   </xsl:variable>
 
   <xsl:template name="list-keywords-comma-exploder">

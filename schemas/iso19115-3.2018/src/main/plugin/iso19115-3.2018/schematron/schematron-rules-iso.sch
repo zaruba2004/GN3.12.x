@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron">
   <sch:title xmlns="http://www.w3.org/2001/XMLSchema" xml:lang="en">ISO rules</sch:title>
+  <sch:title xmlns="http://www.w3.org/2001/XMLSchema" xml:lang="ru">Правила ISO</sch:title>
   <sch:title xmlns="http://www.w3.org/2001/XMLSchema" xml:lang="fr">Règles ISO</sch:title>
   <sch:ns prefix="gml" uri="http://www.opengis.net/gml/3.2"/>
   <sch:ns prefix="srv" uri="http://standards.iso.org/iso/19115/-3/srv/2.0"/>
@@ -28,6 +29,10 @@
       position.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.cit.individualnameandposition-failure-ru"
+                    xml:lang="ru">Для физического лица не определены Имя или Должность.
+    </sch:diagnostic>	
+	
     <sch:diagnostic id="rule.cit.individualnameandposition-failure-fr"
                     xml:lang="fr">Une personne n'a pas de nom ou de fonction.
     </sch:diagnostic>
@@ -41,6 +46,12 @@
       .
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.cit.individualnameandposition-success-ru"
+                    xml:lang="ru">Имя физического лица - 
+      "<sch:value-of select="normalize-space($name)"/>"; Должность - 
+      "<sch:value-of select="normalize-space($position)"/>".
+    </sch:diagnostic>	
+	
     <sch:diagnostic id="rule.cit.individualnameandposition-success-fr"
                     xml:lang="fr">Le nom de la personne est
       "<sch:value-of select="normalize-space($name)"/>"
@@ -55,6 +66,9 @@
     <sch:title xml:lang="en">Individual MUST have a name or a position
     </sch:title>
 
+    <sch:title xml:lang="ru">Для физического лица ДОЛЖНЫ быть определены Имя или Должность.
+    </sch:title>	
+	
     <sch:title xml:lang="fr">Une personne DOIT avoir un nom ou une fonction
     </sch:title>
 
@@ -72,11 +86,11 @@
 
 
       <sch:assert test="$hasName or $hasPosition"
-                  diagnostics="rule.cit.individualnameandposition-failure-en                       rule.cit.individualnameandposition-failure-fr"/>
+                  diagnostics="rule.cit.individualnameandposition-failure-en           rule.cit.individualnameandposition-failure-ru              rule.cit.individualnameandposition-failure-fr"/>
 
 
       <sch:report test="$hasName or $hasPosition"
-                  diagnostics="rule.cit.individualnameandposition-success-en                       rule.cit.individualnameandposition-success-fr"/>
+                  diagnostics="rule.cit.individualnameandposition-success-en           rule.cit.individualnameandposition-success-ru              rule.cit.individualnameandposition-success-fr"/>
 
     </sch:rule>
 
@@ -88,6 +102,10 @@
       logo.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.cit.organisationnameandlogo-failure-ru"
+                    xml:lang="ru">Для юридического лица не определены Название или Логотип.
+    </sch:diagnostic>	
+	
     <sch:diagnostic id="rule.cit.organisationnameandlogo-failure-fr"
                     xml:lang="fr">Une organisation n'a pas de nom ou de logo.
     </sch:diagnostic>
@@ -101,6 +119,12 @@
       .
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.cit.organisationnameandlogo-success-ru"
+                    xml:lang="ru">Название юридического лица - 
+      "<sch:value-of select="normalize-space($name)"/>"; Логотип - 
+      "<sch:value-of select="normalize-space($logo)"/>".
+    </sch:diagnostic>	
+	
     <sch:diagnostic id="rule.cit.organisationnameandlogo-success-fr"
                     xml:lang="fr">Le nom de l'organisation est
       "<sch:value-of select="normalize-space($name)"/>"
@@ -114,6 +138,8 @@
 
     <sch:title xml:lang="en">Organisation MUST have a name or a logo</sch:title>
 
+    <sch:title xml:lang="ru">Для юридического лица ДОЛЖНЫ быть определены Название или Логотип.</sch:title>	
+	
     <sch:title xml:lang="fr">Une organisation DOIT avoir un nom ou un logo
     </sch:title>
 
@@ -131,11 +157,11 @@
 
 
       <sch:assert test="$hasName or $hasLogo"
-                  diagnostics="rule.cit.organisationnameandlogo-failure-en                       rule.cit.organisationnameandlogo-failure-fr"/>
+                  diagnostics="rule.cit.organisationnameandlogo-failure-en           rule.cit.organisationnameandlogo-failure-ru            rule.cit.organisationnameandlogo-failure-fr"/>
 
 
       <sch:report test="$hasName or $hasLogo"
-                  diagnostics="rule.cit.organisationnameandlogo-success-en                       rule.cit.organisationnameandlogo-success-fr"/>
+                  diagnostics="rule.cit.organisationnameandlogo-success-en           rule.cit.organisationnameandlogo-success-ru            rule.cit.organisationnameandlogo-success-fr"/>
 
     </sch:rule>
 
@@ -146,6 +172,10 @@
       The extent does not contain a description or a geographicElement.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.gex.extenthasoneelement-failure-ru" xml:lang="ru">
+      Отсутствует словесное описание экстента или его пространственные границы.
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.gex.extenthasoneelement-failure-fr" xml:lang="fr">
       L'étendue ne contient aucun élement.
     </sch:diagnostic>
@@ -155,6 +185,10 @@
                     xml:lang="en">The extent contains a description.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.gex.extenthasoneelement-desc-success-ru"
+                    xml:lang="ru">Присутствует словесное описание экстента.
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.gex.extenthasoneelement-desc-success-fr"
                     xml:lang="fr">L'étendue contient une description.
     </sch:diagnostic>
@@ -162,6 +196,10 @@
 
     <sch:diagnostic id="rule.gex.extenthasoneelement-id-success-en"
                     xml:lang="en">The extent contains a geographic identifier.
+    </sch:diagnostic>
+	
+    <sch:diagnostic id="rule.gex.extenthasoneelement-id-success-ru"
+                    xml:lang="ru">Присутствуют географический идентификатор экстента.
     </sch:diagnostic>
 
     <sch:diagnostic id="rule.gex.extenthasoneelement-id-success-fr"
@@ -174,6 +212,10 @@
                     xml:lang="en">The extent contains a bounding box element.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.gex.extenthasoneelement-box-success-ru"
+                    xml:lang="ru">Присутствуют пространственные прямоугольные границы экстента.
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.gex.extenthasoneelement-box-success-fr"
                     xml:lang="fr">L'étendue contient une emprise géographique.
     </sch:diagnostic>
@@ -183,6 +225,10 @@
                     xml:lang="en">The extent contains a bounding polygon.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.gex.extenthasoneelement-poly-success-ru"
+                    xml:lang="ru">Присутствуют пространственные полигональные границы экстента.
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.gex.extenthasoneelement-poly-success-fr"
                     xml:lang="fr">L'étendue contient un polygone englobant.
     </sch:diagnostic>
@@ -192,6 +238,10 @@
                     xml:lang="en">The extent contains a vertical element.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.gex.extenthasoneelement-vertical-success-ru"
+                    xml:lang="ru">Присутствует описание вертикального экстента.
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.gex.extenthasoneelement-vertical-success-fr"
                     xml:lang="fr">L'étendue contient une étendue verticale.
     </sch:diagnostic>
@@ -199,6 +249,10 @@
 
     <sch:diagnostic id="rule.gex.extenthasoneelement-temporal-success-en"
                     xml:lang="en">The extent contains a temporal element.
+    </sch:diagnostic>
+	
+    <sch:diagnostic id="rule.gex.extenthasoneelement-temporal-success-ru"
+                    xml:lang="ru">Присутствует описание временного экстента.
     </sch:diagnostic>
 
     <sch:diagnostic id="rule.gex.extenthasoneelement-temporal-success-fr"
@@ -213,6 +267,9 @@
       temporal or vertical element
     </sch:title>
 
+    <sch:title xml:lang="ru">Экстент ДОЛЖЕН иметь или словесное или пространственное, а также может иметь временное и вертикальное описания.
+    </sch:title>
+	
     <sch:title xml:lang="fr">Une étendue DOIT avoir une description ou un
       élément géographique, temporel ou vertical
     </sch:title>
@@ -246,26 +303,26 @@
 
 
       <sch:assert test="$hasAtLeastOneElement"
-                  diagnostics="rule.gex.extenthasoneelement-failure-en                       rule.gex.extenthasoneelement-failure-fr"/>
+                  diagnostics="rule.gex.extenthasoneelement-failure-en           rule.gex.extenthasoneelement-failure-ru            rule.gex.extenthasoneelement-failure-fr"/>
 
 
       <sch:report test="count($description)"
-                  diagnostics="rule.gex.extenthasoneelement-desc-success-en                       rule.gex.extenthasoneelement-desc-success-fr"/>
+                  diagnostics="rule.gex.extenthasoneelement-desc-success-en           rule.gex.extenthasoneelement-desc-success-ru            rule.gex.extenthasoneelement-desc-success-fr"/>
 
       <sch:report test="count($geographicId)"
-                  diagnostics="rule.gex.extenthasoneelement-id-success-en                       rule.gex.extenthasoneelement-id-success-fr"/>
+                  diagnostics="rule.gex.extenthasoneelement-id-success-en            rule.gex.extenthasoneelement-id-success-ru           rule.gex.extenthasoneelement-id-success-fr"/>
 
       <sch:report test="count($geographicBox)"
-                  diagnostics="rule.gex.extenthasoneelement-box-success-en                       rule.gex.extenthasoneelement-box-success-fr"/>
+                  diagnostics="rule.gex.extenthasoneelement-box-success-en           rule.gex.extenthasoneelement-box-success-ru            rule.gex.extenthasoneelement-box-success-fr"/>
 
       <sch:report test="count($geographicPoly)"
-                  diagnostics="rule.gex.extenthasoneelement-poly-success-en                       rule.gex.extenthasoneelement-poly-success-fr"/>
+                  diagnostics="rule.gex.extenthasoneelement-poly-success-en           rule.gex.extenthasoneelement-poly-success-ru            rule.gex.extenthasoneelement-poly-success-fr"/>
 
       <sch:report test="count($temporal)"
-                  diagnostics="rule.gex.extenthasoneelement-temporal-success-en                       rule.gex.extenthasoneelement-temporal-success-fr"/>
+                  diagnostics="rule.gex.extenthasoneelement-temporal-success-en           rule.gex.extenthasoneelement-temporal-success-ru            rule.gex.extenthasoneelement-temporal-success-fr"/>
 
       <sch:report test="count($vertical)"
-                  diagnostics="rule.gex.extenthasoneelement-vertical-success-en                       rule.gex.extenthasoneelement-vertical-success-fr"/>
+                  diagnostics="rule.gex.extenthasoneelement-vertical-success-en           rule.gex.extenthasoneelement-vertical-success-ru            rule.gex.extenthasoneelement-vertical-success-fr"/>
 
     </sch:rule>
 
@@ -277,6 +334,10 @@
       CRS identifier.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.gex.verticalhascrsorcrsid-failure-ru"
+                    xml:lang="ru">В вертикальном экстенте отсутствует ссылка или описание СК.
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.gex.verticalhascrsorcrsid-failure-fr"
                     xml:lang="fr">L'étendue verticale ne contient pas de CRS ou
       d'identifiant de CRS.
@@ -287,6 +348,10 @@
                     xml:lang="en">The vertical extent contains CRS information.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.gex.verticalhascrsorcrsid-success-ru"
+                    xml:lang="ru">Вертикальный экстент содержит описание СК.
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.gex.verticalhascrsorcrsid-success-fr"
                     xml:lang="fr">L'étendue verticale contient les informations
       sur le CRS.
@@ -299,6 +364,9 @@
       identifier
     </sch:title>
 
+    <sch:title xml:lang="ru">Вертикальный экстенте ДОЛЖЕН содержать ссылку или описание СК
+    </sch:title>
+	
     <sch:title xml:lang="fr">Une étendue verticale DOIT contenir un CRS ou un
       identifiant de CRS
     </sch:title>
@@ -315,11 +383,11 @@
 
 
       <sch:assert test="$hasCrsOrCrsId"
-                  diagnostics="rule.gex.verticalhascrsorcrsid-failure-en                       rule.gex.verticalhascrsorcrsid-failure-fr"/>
+                  diagnostics="rule.gex.verticalhascrsorcrsid-failure-en           rule.gex.verticalhascrsorcrsid-failure-ru            rule.gex.verticalhascrsorcrsid-failure-fr"/>
 
 
       <sch:report test="$hasCrsOrCrsId"
-                  diagnostics="rule.gex.verticalhascrsorcrsid-success-en                       rule.gex.verticalhascrsorcrsid-success-fr"/>
+                  diagnostics="rule.gex.verticalhascrsorcrsid-success-en           rule.gex.verticalhascrsorcrsid-success-ru            rule.gex.verticalhascrsorcrsid-success-fr"/>
 
     </sch:rule>
 
@@ -330,6 +398,10 @@
       The releasabilty does not define addresse or statement.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mco-releasability-failure-ru" xml:lang="ru">
+      В выходных сведениях не определены сторона или описание поставки.
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mco-releasability-failure-fr" xml:lang="fr">
       La possibilité de divulgation ne définit pas de
       destinataire ou d'indication.
@@ -341,6 +413,11 @@
       "<sch:value-of select="normalize-space($addressee)"/>".
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mco-releasability-success-ru" xml:lang="ru">
+      Сторона-поставщик из выходных сведений:
+      "<sch:value-of select="normalize-space($addressee)"/>".
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mco-releasability-success-fr" xml:lang="fr">
       Le destinataire dans le cas de possibilité de divulgation
       est défini "<sch:value-of select="normalize-space($addressee)"/>".
@@ -350,6 +427,12 @@
     <sch:diagnostic id="rule.mco-releasability-statement-success-en"
                     xml:lang="en">
       The releasability statement is
+      "<sch:value-of select="normalize-space($statement)"/>".
+    </sch:diagnostic>
+	
+    <sch:diagnostic id="rule.mco-releasability-statement-success-ru"
+                    xml:lang="ru">
+      Описание поставки из выходных сведений:
       "<sch:value-of select="normalize-space($statement)"/>".
     </sch:diagnostic>
 
@@ -366,6 +449,9 @@
       specified an addresse or a statement
     </sch:title>
 
+    <sch:title xml:lang="ru">В выходных сведениях ДОЛЖНЫ быть приведены сторона и/или описание поставки.
+    </sch:title>	
+	
     <sch:title xml:lang="fr">La possibilité de divulgation
       DOIT définir un destinataire ou une indication
     </sch:title>
@@ -387,15 +473,15 @@
 
 
       <sch:assert test="$hasAddresseeOrStatement"
-                  diagnostics="rule.mco-releasability-failure-en                       rule.mco-releasability-failure-fr"/>
+                  diagnostics="rule.mco-releasability-failure-en           rule.mco-releasability-failure-ru            rule.mco-releasability-failure-fr"/>
 
 
       <sch:report test="count($addressee)"
-                  diagnostics="rule.mco-releasability-success-en                       rule.mco-releasability-success-fr"/>
+                  diagnostics="rule.mco-releasability-success-en          rule.mco-releasability-success-ru             rule.mco-releasability-success-fr"/>
 
 
       <sch:report test="count($statement)"
-                  diagnostics="rule.mco-releasability-statement-success-en                       rule.mco-releasability-statement-success-fr"/>
+                  diagnostics="rule.mco-releasability-statement-success-en           rule.mco-releasability-statement-success-ru            rule.mco-releasability-statement-success-fr"/>
 
 
     </sch:rule>
@@ -408,6 +494,11 @@
       The legal constraint is incomplete.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mco-legalconstraintdetails-failure-ru"
+                    xml:lang="ru">
+      Правовые ограничения являются неполными.
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mco-legalconstraintdetails-failure-fr"
                     xml:lang="fr">
       La contrainte légale est incomplète.
@@ -419,6 +510,11 @@
       The legal constraint is complete.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mco-legalconstraintdetails-success-ru"
+                    xml:lang="ru">
+	  Правовые ограничения являются полными.
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mco-legalconstraintdetails-success-fr"
                     xml:lang="fr">
       La contrainte légale est complète.
@@ -433,6 +529,11 @@
       use limitation or releasability
     </sch:title>
 
+    <sch:title xml:lang="ru">Правовые ограничения ДОЛЖНЫ
+ 	  указывать на доступ, использование или другое
+	  ограничение или ограничение использования или возможность выпуска
+    </sch:title>
+	
     <sch:title xml:lang="fr">Une contrainte légale DOIT
       définir un type de contrainte (d'accès, d'utilisation ou autre)
       ou bien une limite d'utilisation ou une possibilité de divulgation
@@ -467,11 +568,11 @@
 
 
       <sch:assert test="$hasDetails"
-                  diagnostics="rule.mco-legalconstraintdetails-failure-en                       rule.mco-legalconstraintdetails-failure-fr"/>
+                  diagnostics="rule.mco-legalconstraintdetails-failure-en           rule.mco-legalconstraintdetails-failure-ru            rule.mco-legalconstraintdetails-failure-fr"/>
 
 
       <sch:report test="$hasDetails"
-                  diagnostics="rule.mco-legalconstraintdetails-success-en                       rule.mco-legalconstraintdetails-success-fr"/>
+                  diagnostics="rule.mco-legalconstraintdetails-success-en           rule.mco-legalconstraintdetails-success-ru            rule.mco-legalconstraintdetails-success-fr"/>
 
 
     </sch:rule>
@@ -485,6 +586,12 @@
       while access and use constraint is set to other restriction.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mco-legalconstraint-other-failure-ru"
+                    xml:lang="ru">
+      Правовые ограничения не указывают 'других ограничений'
+      в то время как в Ограничениях доступа и использования указывается 'другое ограничение'.
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mco-legalconstraint-other-failure-fr"
                     xml:lang="fr">
       La contrainte légale ne précise pas les autres contraintes
@@ -499,6 +606,12 @@
       "<sch:value-of select="$otherConstraints"/>".
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mco-legalconstraint-other-success-ru"
+                    xml:lang="ru">
+      'Другие ограничения' в Правовых ограничениях:
+      "<sch:value-of select="$otherConstraints"/>".
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mco-legalconstraint-other-success-fr"
                     xml:lang="fr">
       Les autres contraintes de la contrainte légale sont
@@ -514,6 +627,11 @@
       specified other constraint.
     </sch:title>
 
+    <sch:title xml:lang="ru">Если в Правовых ограничениях отмечаются
+	 другие 'ограничения доступа' или 'ограничения использования' ДОЛЖНЫ
+	 быть определены Другие ограничения.
+    </sch:title>
+	
     <sch:title xml:lang="fr">Une contrainte légale indiquant
       d'autres restrictions d'utilisation ou d'accès DOIT
       préciser ces autres restrictions
@@ -533,11 +651,11 @@
 
 
       <sch:assert test="$hasOtherConstraints"
-                  diagnostics="rule.mco-legalconstraint-other-failure-en                       rule.mco-legalconstraint-other-failure-fr"/>
+                  diagnostics="rule.mco-legalconstraint-other-failure-en          rule.mco-legalconstraint-other-failure-ru             rule.mco-legalconstraint-other-failure-fr"/>
 
 
       <sch:report test="$hasOtherConstraints"
-                  diagnostics="rule.mco-legalconstraint-other-success-en                       rule.mco-legalconstraint-other-success-fr"/>
+                  diagnostics="rule.mco-legalconstraint-other-success-en          rule.mco-legalconstraint-other-success-ru             rule.mco-legalconstraint-other-success-fr"/>
 
 
     </sch:rule>
@@ -549,6 +667,10 @@
       element must be MD_Metadata.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mdb.root-element-failure-ru" xml:lang="ru">Корневым разделом
+	  должен быть раздел MD_Metadata.
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mdb.root-element-failure-fr" xml:lang="fr">Modifier
       l'élément racine du document pour que ce
       soit un élément MD_Metadata.
@@ -559,6 +681,10 @@
       element MD_Metadata found.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mdb.root-element-success-ru" xml:lang="ru">Крневой раздел
+	  MD_Metadata присутствует.
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mdb.root-element-success-fr" xml:lang="fr">Élément
       racine MD_Metadata défini.
     </sch:diagnostic>
@@ -568,14 +694,19 @@
 
     <sch:title xml:lang="en">Metadata document root element</sch:title>
 
+    <sch:title xml:lang="ru">Корневой раздел метаданных</sch:title>
+
     <sch:title xml:lang="fr">Élément racine du document</sch:title>
-
-
+	
     <sch:p xml:lang="en">A metadata instance document conforming to
       this specification SHALL have a root MD_Metadata element
       defined in the http://standards.iso.org/iso/19115/-3/mdb/2.0 namespace.
     </sch:p>
 
+    <sch:p xml:lang="ru">Метаданные ДОЛЖНЫ иметь корневой раздел MD_Metadata,
+	 определенный в http://standards.iso.org/iso/19115/-3/mdb/2.0.
+    </sch:p>
+	
     <sch:p xml:lang="fr">Une fiche de métadonnées conforme au standard
       ISO19115-1 DOIT avoir un élément racine MD_Metadata (défini dans l'espace
       de nommage http://standards.iso.org/iso/19115/-3/mdb/2.0).
@@ -588,11 +719,11 @@
 
 
       <sch:assert test="$hasOneMD_MetadataElement"
-                  diagnostics="rule.mdb.root-element-failure-en                     rule.mdb.root-element-failure-fr"/>
+                  diagnostics="rule.mdb.root-element-failure-en          rule.mdb.root-element-failure-ru           rule.mdb.root-element-failure-fr"/>
 
 
       <sch:report test="$hasOneMD_MetadataElement"
-                  diagnostics="rule.mdb.root-element-success-en                       rule.mdb.root-element-success-fr"/>
+                  diagnostics="rule.mdb.root-element-success-en          rule.mdb.root-element-success-ru             rule.mdb.root-element-success-fr"/>
 
     </sch:rule>
 
@@ -604,6 +735,11 @@
       "<sch:value-of select="$encoding"/>".
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mdb.defaultlocale-failure-ru" xml:lang="ru">Кодировка
+	  по умолчанию - "UTF-8". Текущая кодировка - 
+      "<sch:value-of select="$encoding"/>".
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mdb.defaultlocale-failure-fr" xml:lang="fr">
       L'encodage ne doit pas être vide. La valeur par défaut est
       "UTF-8". La valeur actuelle est "<sch:value-of select="$encoding"/>".
@@ -614,6 +750,9 @@
       characeter encoding is "<sch:value-of select="$encoding"/>.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mdb.defaultlocale-success-ru" xml:lang="ru">Кодировка - "<sch:value-of select="$encoding"/>.
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mdb.defaultlocale-success-fr" xml:lang="fr">
       L'encodage est "<sch:value-of select="$encoding"/>.
     </sch:diagnostic>
@@ -623,6 +762,8 @@
 
     <sch:title xml:lang="en">Default locale</sch:title>
 
+    <sch:title xml:lang="ru">Локаль по умолчанию</sch:title>
+	
     <sch:title xml:lang="fr">Langue du document</sch:title>
 
 
@@ -631,6 +772,10 @@
       encoding is "UTF-8".
     </sch:p>
 
+    <sch:p xml:lang="ru">Языковые паряметры (локаль) ДОЛЖНЫ быть определены
+	  если не указана кодировка. Кодировка по умолчанию - "UTF-8".
+    </sch:p>
+	
     <sch:p xml:lang="fr">La langue doit être documentée
       si non définie par l'encodage. L'encodage par défaut doit être "UTF-8".
     </sch:p>
@@ -648,11 +793,11 @@
 
 
       <sch:assert test="$hasEncoding"
-                  diagnostics="rule.mdb.defaultlocale-failure-en                      rule.mdb.defaultlocale-failure-fr"/>
+                  diagnostics="rule.mdb.defaultlocale-failure-en         rule.mdb.defaultlocale-failure-ru            rule.mdb.defaultlocale-failure-fr"/>
 
 
       <sch:report test="$hasEncoding"
-                  diagnostics="rule.mdb.defaultlocale-success-en                      rule.mdb.defaultlocale-success-fr"/>
+                  diagnostics="rule.mdb.defaultlocale-success-en         rule.mdb.defaultlocale-success-ru             rule.mdb.defaultlocale-success-fr"/>
 
     </sch:rule>
 
@@ -665,6 +810,11 @@
       "<sch:value-of select="$scopeCode"/>").
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mdb.scope-name-failure-ru" xml:lang="ru">Требуется
+	  указать Область применения ресурса (в случае если это не 'набор данных')
+      "<sch:value-of select="$scopeCode"/>").
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mdb.scope-name-failure-fr" xml:lang="fr">Préciser
       la description du domaine d'application
       (car le document décrit une ressource qui n'est pas un "jeu de données",
@@ -679,6 +829,11 @@
       is defined for resource with type "<sch:value-of select="$scopeCode"/>".
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mdb.scope-name-success-ru" xml:lang="ru">Область применения: "
+      <sch:value-of select="$scopeCodeName"/>
+      <sch:value-of select="$nilReason"/>", - ресурса типа "<sch:value-of select="$scopeCode"/>".
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mdb.scope-name-success-fr" xml:lang="fr">La
       description du domaine d'application
       "
@@ -693,6 +848,8 @@
 
     <sch:title xml:lang="en">Metadata scope Name</sch:title>
 
+    <sch:title xml:lang="ru">Область применения ресурса</sch:title>
+	
     <sch:title xml:lang="fr">Description du domaine d'application</sch:title>
 
 
@@ -701,6 +858,10 @@
       "dataset"
     </sch:p>
 
+    <sch:p xml:lang="ru">В разделе MD_MetadataScope ДОЛЖНА быть описана
+	  Область применения ресурса если только его тип не 'набор данных'
+    </sch:p>
+	
     <sch:p xml:lang="fr">Si un élément domaine d'application (MD_MetadataScope)
       est défini, sa description (name) DOIT avoir une valeur
       si ce domaine n'est pas "jeu de données" (ie. "dataset").
@@ -727,11 +888,11 @@
 
 
       <sch:assert test="$hasScopeCodeName or $hasNilReason"
-                  diagnostics="rule.mdb.scope-name-failure-en                      rule.mdb.scope-name-failure-fr"/>
+                  diagnostics="rule.mdb.scope-name-failure-en          rule.mdb.scope-name-failure-ru            rule.mdb.scope-name-failure-fr"/>
 
 
       <sch:report test="$hasScopeCodeName or $hasNilReason"
-                  diagnostics="rule.mdb.scope-name-success-en                      rule.mdb.scope-name-success-fr"/>
+                  diagnostics="rule.mdb.scope-name-success-en          rule.mdb.scope-name-success-ru            rule.mdb.scope-name-success-fr"/>
 
     </sch:rule>
 
@@ -743,6 +904,10 @@
       in the metadata section.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mdb.create-date-failure-ru" xml:lang="ru">Требуется
+      определить Дату создания метаданных в соответствующем разделе.
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mdb.create-date-failure-fr" xml:lang="fr">Définir
       une date de création pour le document
       dans la section sur les métadonnées.
@@ -753,6 +918,10 @@
       Metadata creation date:<sch:value-of select="$creationDates"/>.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mdb.create-date-success-ru" xml:lang="ru">
+      Дата создания метаданных:<sch:value-of select="$creationDates"/>.
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mdb.create-date-success-fr" xml:lang="fr">
       Date de création du document :<sch:value-of select="$creationDates"/>.
     </sch:diagnostic>
@@ -762,6 +931,8 @@
 
     <sch:title xml:lang="en">Metadata create date</sch:title>
 
+    <sch:title xml:lang="ru">Дата создания метаданных</sch:title>
+	
     <sch:title xml:lang="fr">Date de création du document</sch:title>
 
 
@@ -769,6 +940,10 @@
       MUST be present in every MD_Metadata instance.
     </sch:p>
 
+    <sch:p xml:lang="ru">В разделе MD_Metadata ДОЛЖНО присутствовать свойство
+	  dateInfo с типом "создание", т.е. ДОЛЖНА быть определена Дата создания метаданных.
+    </sch:p>
+	
     <sch:p xml:lang="fr">Tout document DOIT avoir une date de création
       définie (en utilisant un élément dateInfo avec un type de date
       "creation").
@@ -787,10 +962,10 @@
 
 
       <sch:assert test="$hasAtLeastOneCreationDate"
-                  diagnostics="rule.mdb.create-date-failure-en                      rule.mdb.create-date-failure-fr"/>
+                  diagnostics="rule.mdb.create-date-failure-en          rule.mdb.create-date-failure-ru            rule.mdb.create-date-failure-fr"/>
 
       <sch:report test="$hasAtLeastOneCreationDate"
-                  diagnostics="rule.mdb.create-date-success-en                      rule.mdb.create-date-success-fr"/>
+                  diagnostics="rule.mdb.create-date-success-en          rule.mdb.create-date-success-ru            rule.mdb.create-date-success-fr"/>
 
     </sch:rule>
 
@@ -804,6 +979,13 @@
       does not specified max occurence.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mex.datatypedetails-maxocc-failure-ru"
+                    xml:lang="ru">
+      Информация об элементе расширения "<sch:value-of select="$name"/>"
+      типа "<sch:value-of select="$dataType"/>"
+      не содержит сведений о максимальной кардинальности.
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mex.datatypedetails-maxocc-failure-fr"
                     xml:lang="fr">
       L'élément d'extension "<sch:value-of select="$name"/>"
@@ -819,6 +1001,13 @@
       has max occurence: "<sch:value-of select="$maximumOccurrence"/>".
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mex.datatypedetails-maxocc-success-ru"
+                    xml:lang="ru">
+      Информация об элементе расширения "<sch:value-of select="$name"/>"
+      типа "<sch:value-of select="$dataType"/>"
+      сообщает о максимальной кардинальности равной: "<sch:value-of select="$maximumOccurrence"/>".
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mex.datatypedetails-maxocc-success-fr"
                     xml:lang="fr">
       L'élément d'extension "<sch:value-of select="$name"/>"
@@ -835,6 +1024,13 @@
       does not specified domain value.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mex.datatypedetails-domain-failure-ru"
+                    xml:lang="ru">
+      Информация об элементе расширения "<sch:value-of select="$name"/>"
+      типа "<sch:value-of select="$dataType"/>"
+      не содержит сведений о значениях домена.
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mex.datatypedetails-domain-failure-fr"
                     xml:lang="fr">
       L'élément d'extension "<sch:value-of select="$name"/>"
@@ -850,6 +1046,13 @@
       has domain value: "<sch:value-of select="$domainValue"/>".
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mex.datatypedetails-domain-success-ru"
+                    xml:lang="ru">
+      Информация об элементе расширения "<sch:value-of select="$name"/>"
+      типа "<sch:value-of select="$dataType"/>"
+      описывает значения домена: "<sch:value-of select="$domainValue"/>".
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mex.datatypedetails-domain-success-fr"
                     xml:lang="fr">
       L'élément d'extension "<sch:value-of select="$name"/>"
@@ -865,6 +1068,12 @@
       MUST specified max occurence and domain value
     </sch:title>
 
+    <sch:title xml:lang="ru">Информация об элементе расширения,
+	  который не является списком кодов, перечислением или элементом
+	  списка кодов, ДОЛЖНА включать описания значений максимальной кардинальности
+	  и домена
+    </sch:title>
+	
     <sch:title xml:lang="fr">Un élément d'extension qui n'est
       ni une codelist, ni une énumération, ni un élément de codelist
       DOIT préciser le nombre maximum d'occurences
@@ -891,11 +1100,11 @@
 
 
       <sch:assert test="$hasMaximumOccurrence"
-                  diagnostics="rule.mex.datatypedetails-maxocc-failure-en                       rule.mex.datatypedetails-maxocc-failure-fr"/>
+                  diagnostics="rule.mex.datatypedetails-maxocc-failure-en           rule.mex.datatypedetails-maxocc-failure-ru            rule.mex.datatypedetails-maxocc-failure-fr"/>
 
 
       <sch:report test="$hasMaximumOccurrence"
-                  diagnostics="rule.mex.datatypedetails-maxocc-success-en                       rule.mex.datatypedetails-maxocc-success-fr"/>
+                  diagnostics="rule.mex.datatypedetails-maxocc-success-en           rule.mex.datatypedetails-maxocc-success-ru            rule.mex.datatypedetails-maxocc-success-fr"/>
 
 
       <sch:let name="domainValue" value="normalize-space(mex:domainValue/*)"/>
@@ -905,11 +1114,11 @@
 
 
       <sch:assert test="$hasDomainValue"
-                  diagnostics="rule.mex.datatypedetails-domain-failure-en                       rule.mex.datatypedetails-domain-failure-fr"/>
+                  diagnostics="rule.mex.datatypedetails-domain-failure-en           rule.mex.datatypedetails-domain-failure-ru            rule.mex.datatypedetails-domain-failure-fr"/>
 
 
       <sch:report test="$hasDomainValue"
-                  diagnostics="rule.mex.datatypedetails-domain-success-en                       rule.mex.datatypedetails-domain-success-fr"/>
+                  diagnostics="rule.mex.datatypedetails-domain-success-en           rule.mex.datatypedetails-domain-success-ru            rule.mex.datatypedetails-domain-success-fr"/>
 
     </sch:rule>
 
@@ -921,6 +1130,11 @@
       does not specified the condition.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mex.conditional-failure-ru" xml:lang="ru">
+      Условный элемент расширения "<sch:value-of select="$name"/>"
+      без описания условий.
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mex.conditional-failure-fr" xml:lang="fr">
       L'élément d'extension conditionnel "<sch:value-of select="$name"/>"
       ne précise pas les termes de la condition.
@@ -932,6 +1146,11 @@
       has for condition: "<sch:value-of select="$condition"/>".
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mex.conditional-success-ru" xml:lang="ru">
+      Условный элемент расширения "<sch:value-of select="$name"/>"
+      с условием: "<sch:value-of select="$condition"/>".
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mex.conditional-success-fr" xml:lang="fr">
       L'élément d'extension conditionnel "<sch:value-of select="$name"/>"
       a pour condition : "<sch:value-of select="$condition"/>".
@@ -945,6 +1164,10 @@
       which are conditional MUST explained the condition
     </sch:title>
 
+    <sch:title xml:lang="ru">Информация об условном элементе
+      расширения ДОЛЖНА включать описание условия
+    </sch:title>
+	
     <sch:title xml:lang="fr">Un élément d'extension conditionnel
       DOIT préciser les termes de la condition
     </sch:title>
@@ -964,11 +1187,11 @@
 
 
       <sch:assert test="$hasCondition"
-                  diagnostics="rule.mex.conditional-failure-en                       rule.mex.conditional-failure-fr"/>
+                  diagnostics="rule.mex.conditional-failure-en          rule.mex.conditional-failure-ru             rule.mex.conditional-failure-fr"/>
 
 
       <sch:report test="$hasCondition"
-                  diagnostics="rule.mex.conditional-success-en                       rule.mex.conditional-success-fr"/>
+                  diagnostics="rule.mex.conditional-success-en          rule.mex.conditional-success-ru             rule.mex.conditional-success-fr"/>
 
 
     </sch:rule>
@@ -982,6 +1205,12 @@
       does not specified a code.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mex.mandatorycode-failure-ru" xml:lang="ru">
+      Элемент расширения "<sch:value-of select="$name"/>"
+      типа "<sch:value-of select="$dataType"/>"
+      не имеет Кода.
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mex.mandatorycode-failure-fr" xml:lang="fr">
       L'élément d'extension "<sch:value-of select="$name"/>"
       de type "<sch:value-of select="$dataType"/>"
@@ -995,6 +1224,12 @@
       has for code: "<sch:value-of select="$code"/>".
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mex.mandatorycode-success-ru" xml:lang="ru">
+      Элемент расширения "<sch:value-of select="$name"/>"
+      типа "<sch:value-of select="$dataType"/>"
+      имеет Код: "<sch:value-of select="$code"/>".
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mex.mandatorycode-success-fr" xml:lang="fr">
       L'élément d'extension "<sch:value-of select="$name"/>"
       de type "<sch:value-of select="$dataType"/>"
@@ -1009,6 +1244,13 @@
       does not specified a concept name.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mex.mex.mandatoryconceptname-failure-ru"
+                    xml:lang="ru">
+      Элемент расширения "<sch:value-of select="$name"/>"
+      типа "<sch:value-of select="$dataType"/>"
+      не имеет Названия.
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mex.mex.mandatoryconceptname-failure-fr"
                     xml:lang="fr">
       L'élément d'extension "<sch:value-of select="$name"/>"
@@ -1024,6 +1266,13 @@
       has for concept name: "<sch:value-of select="$conceptName"/>".
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mex.mex.mandatoryconceptname-success-ru"
+                    xml:lang="ru">
+      Элемент расширения "<sch:value-of select="$name"/>"
+      типа "<sch:value-of select="$dataType"/>"
+      имеет Название: "<sch:value-of select="$conceptName"/>".
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mex.mex.mandatoryconceptname-success-fr"
                     xml:lang="fr">
       L'élément d'extension "<sch:value-of select="$name"/>"
@@ -1038,6 +1287,11 @@
     <sch:title xml:lang="en">Extended element information
       which are codelist, enumeration or codelistElement
       MUST specified a code and a concept name
+    </sch:title>
+	
+    <sch:title xml:lang="ru">Информация об элементе расширения,
+      который является списком кодов, перечислением или элементом
+	  списка кодов, ДОЛЖНА включать Код и Название
     </sch:title>
 
     <sch:title xml:lang="fr">Un élément d'extension qui est
@@ -1064,11 +1318,11 @@
 
 
       <sch:assert test="$hasCode"
-                  diagnostics="rule.mex.mandatorycode-failure-en                       rule.mex.mandatorycode-failure-fr"/>
+                  diagnostics="rule.mex.mandatorycode-failure-en          rule.mex.mandatorycode-failure-ru             rule.mex.mandatorycode-failure-fr"/>
 
 
       <sch:report test="$hasCode"
-                  diagnostics="rule.mex.mandatorycode-success-en                       rule.mex.mandatorycode-success-fr"/>
+                  diagnostics="rule.mex.mandatorycode-success-en          rule.mex.mandatorycode-success-ru             rule.mex.mandatorycode-success-fr"/>
 
 
       <sch:let name="conceptName" value="normalize-space(mex:conceptName/*)"/>
@@ -1078,11 +1332,11 @@
 
 
       <sch:assert test="$hasConceptName"
-                  diagnostics="rule.mex.mex.mandatoryconceptname-failure-en                       rule.mex.mex.mandatoryconceptname-failure-fr"/>
+                  diagnostics="rule.mex.mex.mandatoryconceptname-failure-en           rule.mex.mex.mandatoryconceptname-failure-ru            rule.mex.mex.mandatoryconceptname-failure-fr"/>
 
 
       <sch:report test="$hasConceptName"
-                  diagnostics="rule.mex.mex.mandatoryconceptname-success-en                       rule.mex.mex.mandatoryconceptname-success-fr"/>
+                  diagnostics="rule.mex.mex.mandatoryconceptname-success-en           rule.mex.mex.mandatoryconceptname-success-ru            rule.mex.mex.mandatoryconceptname-success-fr"/>
 
     </sch:rule>
 
@@ -1093,6 +1347,10 @@
       The maintenance information does not define update frequency.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mmi-updatefrequency-failure-ru" xml:lang="ru">
+      В информации об обслуживании не указана частота обновления.
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mmi-updatefrequency-failure-fr" xml:lang="fr">
       L'information sur la maintenance ne définit pas de fréquence de mise à
       jour.
@@ -1104,6 +1362,11 @@
             select="$maintenanceAndUpdateFrequency"/>".
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mmi-updatefrequency-success-ru" xml:lang="ru">
+      Частота обновления составляет "<sch:value-of
+            select="$maintenanceAndUpdateFrequency"/>".
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mmi-updatefrequency-success-fr" xml:lang="fr">
       La fréquence de mise à jour est "<sch:value-of
             select="$maintenanceAndUpdateFrequency"/>".
@@ -1112,6 +1375,12 @@
 
     <sch:diagnostic id="rule.mmi-updatefrequency-user-success-en" xml:lang="en">
       The user defined update frequency is
+      "<sch:value-of
+            select="normalize-space($userDefinedMaintenanceFrequency)"/>".
+    </sch:diagnostic>
+	
+    <sch:diagnostic id="rule.mmi-updatefrequency-user-success-ru" xml:lang="ru">
+      Частота обновления, определяемая пользователем, составляет
       "<sch:value-of
             select="normalize-space($userDefinedMaintenanceFrequency)"/>".
     </sch:diagnostic>
@@ -1129,6 +1398,10 @@
       specified an update frequency
     </sch:title>
 
+    <sch:title xml:lang="ru">В информации об обслуживании ДОЛЖНА
+	 быть указана частота обновления
+    </sch:title>
+	
     <sch:title xml:lang="fr">L'information sur la maintenance
       DOIT définir une fréquence de mise à jour
     </sch:title>
@@ -1150,15 +1423,15 @@
 
 
       <sch:assert test="$hasCodeOrUserFreq"
-                  diagnostics="rule.mmi-updatefrequency-failure-en                       rule.mmi-updatefrequency-failure-fr"/>
+                  diagnostics="rule.mmi-updatefrequency-failure-en           rule.mmi-updatefrequency-failure-ru            rule.mmi-updatefrequency-failure-fr"/>
 
 
       <sch:report test="count($userDefinedMaintenanceFrequency)"
-                  diagnostics="rule.mmi-updatefrequency-user-success-en                       rule.mmi-updatefrequency-user-success-fr"/>
+                  diagnostics="rule.mmi-updatefrequency-user-success-en           rule.mmi-updatefrequency-user-success-ru            rule.mmi-updatefrequency-user-success-fr"/>
 
 
       <sch:report test="count($maintenanceAndUpdateFrequency)"
-                  diagnostics="rule.mmi-updatefrequency-success-en                       rule.mmi-updatefrequency-success-fr"/>
+                  diagnostics="rule.mmi-updatefrequency-success-en           rule.mmi-updatefrequency-success-ru            rule.mmi-updatefrequency-success-fr"/>
 
 
     </sch:rule>
@@ -1170,6 +1443,10 @@
       sample dimension does not provide max, min or mean value.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mrc.sampledimension-failure-ru" xml:lang="ru">В размере выборки
+	  не приведены максимальное, минимальное или среднее значения.
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mrc.sampledimension-failure-fr" xml:lang="fr">La
       dimension ne précise pas de valeur maximum ou minimum ni de moyenne.
     </sch:diagnostic>
@@ -1180,6 +1457,11 @@
       "<sch:value-of select="normalize-space($max)"/>".
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mrc.sampledimension-max-success-ru" xml:lang="ru">
+      Максимальное значение размера выборки:
+      "<sch:value-of select="normalize-space($max)"/>".
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mrc.sampledimension-max-success-fr" xml:lang="fr">
       La valeur maximum de la dimension de l'échantillon est
       "<sch:value-of select="normalize-space($max)"/>".
@@ -1191,6 +1473,11 @@
       "<sch:value-of select="normalize-space($min)"/>".
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mrc.sampledimension-min-success-ru" xml:lang="ru">
+      Минимальное значение размера выборки:
+      "<sch:value-of select="normalize-space($min)"/>".
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mrc.sampledimension-min-success-fr" xml:lang="fr">
       La valeur minimum de la dimension de l'échantillon est
       "<sch:value-of select="normalize-space($min)"/>".
@@ -1202,6 +1489,11 @@
       "<sch:value-of select="normalize-space($mean)"/>".
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mrc.sampledimension-mean-success-ru" xml:lang="ru">
+      Среднее значение размера выборки:
+      "<sch:value-of select="normalize-space($mean)"/>".
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mrc.sampledimension-mean-success-fr" xml:lang="fr">
       La valeur moyenne de la dimension de l'échantillon est
       "<sch:value-of select="normalize-space($mean)"/>".
@@ -1214,6 +1506,10 @@
       a min or a mean value
     </sch:title>
 
+    <sch:title xml:lang="ru">Информация о размере выборки ДОЛЖНА
+	 приводить максимальное, минимальное или среднее значения
+    </sch:title>
+	
     <sch:title xml:lang="fr">La dimension de l'échantillon DOIT préciser
       une valeur maximum, une valeur minimum ou une moyenne
     </sch:title>
@@ -1234,17 +1530,17 @@
 
 
       <sch:assert test="$hasMaxOrMinOrMean"
-                  diagnostics="rule.mrc.sampledimension-failure-en                       rule.mrc.sampledimension-failure-fr"/>
+                  diagnostics="rule.mrc.sampledimension-failure-en           rule.mrc.sampledimension-failure-ru            rule.mrc.sampledimension-failure-fr"/>
 
 
       <sch:report test="count($max)"
-                  diagnostics="rule.mrc.sampledimension-max-success-en                       rule.mrc.sampledimension-max-success-fr"/>
+                  diagnostics="rule.mrc.sampledimension-max-success-en          rule.mrc.sampledimension-max-success-ru             rule.mrc.sampledimension-max-success-fr"/>
 
       <sch:report test="count($min)"
-                  diagnostics="rule.mrc.sampledimension-min-success-en                       rule.mrc.sampledimension-min-success-fr"/>
+                  diagnostics="rule.mrc.sampledimension-min-success-en          rule.mrc.sampledimension-min-success-ru             rule.mrc.sampledimension-min-success-fr"/>
 
       <sch:report test="count($mean)"
-                  diagnostics="rule.mrc.sampledimension-mean-success-en                       rule.mrc.sampledimension-mean-success-fr"/>
+                  diagnostics="rule.mrc.sampledimension-mean-success-en           rule.mrc.sampledimension-mean-success-ru            rule.mrc.sampledimension-mean-success-fr"/>
 
     </sch:rule>
 
@@ -1255,6 +1551,10 @@
       defined a bound without unit.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mrc.bandunit-failure-ru" xml:lang="ru">Диапазон
+      без указания min/max значений границ.
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mrc.bandunit-failure-fr" xml:lang="fr">La bande
       définit une borne minimum et/ou maximum
       sans préciser d'unité.
@@ -1267,6 +1567,12 @@
       "<sch:value-of select="$units"/>".
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mrc.bandunit-success-ru" xml:lang="ru">
+      Диапазон ограничен [<sch:value-of select="$min"/>-<sch:value-of
+            select="$max"/>] таких ед.измерения как
+      "<sch:value-of select="$units"/>".
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mrc.bandunit-success-fr" xml:lang="fr">
       L'unité de la borne [<sch:value-of select="$min"/>-<sch:value-of
             select="$max"/>] est
@@ -1280,7 +1586,12 @@
       when a bound max or bound min is defined
     </sch:title>
 
-    <sch:title xml:lang="fr">Une bande DOIT préciser l'unité
+    <sch:title xml:lang="ru">Полоса ДОЛЖНА быть указана в измерениях
+	  ее границ, когда определены максимальное или минимальное значения
+    </sch:title>
+	
+	
+	<sch:title xml:lang="fr">Une bande DOIT préciser l'unité
       lorsqu'une borne maximum ou minimum est définie
     </sch:title>
 
@@ -1301,11 +1612,11 @@
 
 
       <sch:assert test="$hasUnits"
-                  diagnostics="rule.mrc.bandunit-failure-en          rule.mrc.bandunit-failure-fr"/>
+                  diagnostics="rule.mrc.bandunit-failure-en     rule.mrc.bandunit-failure-ru     rule.mrc.bandunit-failure-fr"/>
 
 
       <sch:report test="$hasUnits"
-                  diagnostics="rule.mrc.bandunit-success-en                       rule.mrc.bandunit-success-fr"/>
+                  diagnostics="rule.mrc.bandunit-success-en     rule.mrc.bandunit-success-ru     rule.mrc.bandunit-success-fr"/>
 
     </sch:rule>
 
@@ -1316,6 +1627,10 @@
       define a density without unit.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mrd.mediumunit-failure-ru" xml:lang="ru">Указана плотность
+      записи носителя информации без указания единицы плотности записи.
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mrd.mediumunit-failure-fr" xml:lang="fr">La densité
       du média est définie sans unité.
     </sch:diagnostic>
@@ -1326,6 +1641,11 @@
       "<sch:value-of select="$units"/>").
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mrd.mediumunit-success-ru" xml:lang="ru">
+      Плотность записи носителя информации "<sch:value-of select="$density"/>" (в таких ед.плотности как:
+      "<sch:value-of select="$units"/>").
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mrd.mediumunit-success-fr" xml:lang="fr">
       La densité du média est "<sch:value-of select="$density"/>" (unité :
       "<sch:value-of select="$units"/>").
@@ -1338,6 +1658,10 @@
       units
     </sch:title>
 
+    <sch:title xml:lang="ru">При указании плотности записи носителя информации
+	  ДОЛЖНА быть указана единица плотности записи
+    </sch:title>
+	
     <sch:title xml:lang="fr">Un média précisant une densité DOIT préciser
       l'unité
     </sch:title>
@@ -1356,11 +1680,11 @@
 
 
       <sch:assert test="$hasUnits"
-                  diagnostics="rule.mrd.mediumunit-failure-en                       rule.mrd.mediumunit-failure-fr"/>
+                  diagnostics="rule.mrd.mediumunit-failure-en          rule.mrd.mediumunit-failure-ru             rule.mrd.mediumunit-failure-fr"/>
 
 
       <sch:report test="$hasUnits"
-                  diagnostics="rule.mrd.mediumunit-success-en                       rule.mrd.mediumunit-success-fr"/>
+                  diagnostics="rule.mrd.mediumunit-success-en          rule.mrd.mediumunit-success-ru             rule.mrd.mediumunit-success-fr"/>
 
     </sch:rule>
 
@@ -1372,6 +1696,10 @@
       geographic description or a bounding box.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mri.datasetextent-failure-ru" xml:lang="ru">Описание 'набора данных'
+	  ДОЛЖНО содержать описание географического местоположения  или экстент.
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mri.datasetextent-failure-fr" xml:lang="fr">Le jeu
       de données DOIT être décrit par
       une description géographique ou une emprise.
@@ -1383,6 +1711,11 @@
       "<sch:value-of select="normalize-space($geodescription)"/>".
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mri.datasetextentdesc-success-ru" xml:lang="ru">Описание
+		географического местоположения 'набора данных':
+      "<sch:value-of select="normalize-space($geodescription)"/>".
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mri.datasetextentdesc-success-fr" xml:lang="fr">La
       description géographique du jeu de données est
       "<sch:value-of select="normalize-space($geodescription)"/>".
@@ -1398,6 +1731,15 @@
       .
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mri.datasetextentbox-success-ru" xml:lang="ru">Экстент
+	  'набора данных':
+      [W:<sch:value-of select="$geobox/gex:westBoundLongitude/*/text()"/>,
+      S:<sch:value-of select="$geobox/gex:southBoundLatitude/*/text()"/>],
+      [E:<sch:value-of select="$geobox/gex:eastBoundLongitude/*/text()"/>,
+      N:<sch:value-of select="$geobox/gex:northBoundLatitude/*/text()"/>],
+      .
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mri.datasetextentbox-success-fr" xml:lang="fr">
       L'emprise géographique du jeu de données est
       [W:<sch:value-of select="$geobox/gex:westBoundLongitude/*/text()"/>,
@@ -1411,6 +1753,8 @@
   <sch:pattern id="rule.mri.datasetextent">
 
     <sch:title xml:lang="en">Dataset extent</sch:title>
+	
+    <sch:title xml:lang="ru">Описание географического местоположения 'набора данных'</sch:title>
 
     <sch:title xml:lang="fr">Emprise du jeu de données</sch:title>
 
@@ -1431,15 +1775,15 @@
 
 
       <sch:assert test="$hasGeoextent"
-                  diagnostics="rule.mri.datasetextent-failure-en                       rule.mri.datasetextent-failure-fr"/>
+                  diagnostics="rule.mri.datasetextent-failure-en          rule.mri.datasetextent-failure-ru             rule.mri.datasetextent-failure-fr"/>
 
       <!-- TODO: Improve reporting when having multiple elements -->
 
       <sch:report test="count($geodescription) &gt; 0"
-                  diagnostics="rule.mri.datasetextentdesc-success-en                       rule.mri.datasetextentdesc-success-fr"/>
+                  diagnostics="rule.mri.datasetextentdesc-success-en           rule.mri.datasetextentdesc-success-ru            rule.mri.datasetextentdesc-success-fr"/>
 
       <sch:report test="count($geobox) &gt; 0"
-                  diagnostics="rule.mri.datasetextentbox-success-en                       rule.mri.datasetextentbox-success-fr"/>
+                  diagnostics="rule.mri.datasetextentbox-success-en           rule.mri.datasetextentbox-success-ru            rule.mri.datasetextentbox-success-fr"/>
 
     </sch:rule>
 
@@ -1451,6 +1795,11 @@
       dataset or series.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mri.topicategoryfordsandseries-failure-ru"
+                    xml:lang="ru">Описание набора данных или серии данных ДОЛЖНЫ
+	  содержать указание на их Категорию (тему).
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mri.topicategoryfordsandseries-failure-fr"
                     xml:lang="fr">Un thème principal (ISO) DOIT être défini
       quand
@@ -1463,6 +1812,11 @@
       <sch:value-of select="count($topics)"/>.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mri.topicategoryfordsandseries-success-ru"
+                    xml:lang="ru">Количество указанных категорий (тем):
+      <sch:value-of select="count($topics)"/>.
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mri.topicategoryfordsandseries-success-fr"
                     xml:lang="fr">Nombre de thèmes :
       <sch:value-of select="count($topics)"/>.
@@ -1472,6 +1826,8 @@
   <sch:pattern id="rule.mri.topicategoryfordsandseries">
 
     <sch:title xml:lang="en">Topic category for dataset and series</sch:title>
+	
+    <sch:title xml:lang="ru">Категория или тема набора, серии данных</sch:title>
 
     <sch:title xml:lang="fr">Thème principal d'un jeu de données ou d'une
       série
@@ -1491,11 +1847,11 @@
 
 
       <sch:assert test="$hasTopics"
-                  diagnostics="rule.mri.topicategoryfordsandseries-failure-en                       rule.mri.topicategoryfordsandseries-failure-fr"/>
+                  diagnostics="rule.mri.topicategoryfordsandseries-failure-en           rule.mri.topicategoryfordsandseries-failure-ru            rule.mri.topicategoryfordsandseries-failure-fr"/>
 
 
       <sch:report test="$hasTopics"
-                  diagnostics="rule.mri.topicategoryfordsandseries-success-en                       rule.mri.topicategoryfordsandseries-success-fr"/>
+                  diagnostics="rule.mri.topicategoryfordsandseries-success-en          rule.mri.topicategoryfordsandseries-success-ru             rule.mri.topicategoryfordsandseries-success-fr"/>
 
 
     </sch:rule>
@@ -1508,6 +1864,11 @@
       reference MUST be specified.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mri.associatedresource-failure-ru" xml:lang="ru">
+      Для связанного ресурса ДОЛЖНЫ быть определены Название или
+	  Ссылка на соответствеющие метаданные.
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mri.associatedresource-failure-fr" xml:lang="fr">
       Lorsqu'une resource est associée, un nom ou une
       référence à une fiche DOIT être défini.
@@ -1517,6 +1878,11 @@
     <sch:diagnostic id="rule.mri.associatedresource-success-en" xml:lang="en">
       The resource "<sch:value-of select="$resourceRef"/>"
       is associated.
+    </sch:diagnostic>
+	
+    <sch:diagnostic id="rule.mri.associatedresource-success-ru" xml:lang="ru">
+      Ссылка на связанный ресурс - "<sch:value-of select="$resourceRef"/>"
+      .
     </sch:diagnostic>
 
     <sch:diagnostic id="rule.mri.associatedresource-success-fr" xml:lang="fr">La
@@ -1528,6 +1894,8 @@
   <sch:pattern id="rule.mri.associatedresource">
 
     <sch:title xml:lang="en">Associated resource name</sch:title>
+	
+    <sch:title xml:lang="ru">Название связанного ресурса</sch:title>
 
     <sch:title xml:lang="fr">Nom ou référence à une ressource associée
     </sch:title>
@@ -1559,11 +1927,11 @@
 
 
       <sch:assert test="$hasName or $hasMdRef"
-                  diagnostics="rule.mri.associatedresource-failure-en                        rule.mri.associatedresource-failure-fr"/>
+                  diagnostics="rule.mri.associatedresource-failure-en          rule.mri.associatedresource-failure-ru              rule.mri.associatedresource-failure-fr"/>
 
 
       <sch:report test="$hasName or $hasMdRef"
-                  diagnostics="rule.mri.associatedresource-success-en                       rule.mri.associatedresource-success-fr"/>
+                  diagnostics="rule.mri.associatedresource-success-en          rule.mri.associatedresource-success-ru              rule.mri.associatedresource-success-fr"/>
 
     </sch:rule>
 
@@ -1576,6 +1944,11 @@
       includes textual information.
     </sch:diagnostic>
 
+    <sch:diagnostic id="rule.mri.defaultlocalewhenhastext-failure-ru"
+                    xml:lang="ru">Описание ресурса ДОЛЖНО предусматривать
+	  указание языков ресурса если он включает текстовую информацию.
+    </sch:diagnostic>
+	
     <sch:diagnostic id="rule.mri.defaultlocalewhenhastext-failure-fr"
                     xml:lang="fr">La langue de la resource DOIT être renseignée
       lorsque la ressource contient des informations textuelles.
@@ -1584,6 +1957,11 @@
 
     <sch:diagnostic id="rule.mri.defaultlocalewhenhastext-success-en"
                     xml:lang="en">Number of resource language:
+      <sch:value-of select="count($resourceLanguages)"/>.
+    </sch:diagnostic>
+	
+    <sch:diagnostic id="rule.mri.defaultlocalewhenhastext-success-ru"
+                    xml:lang="ru">Количество языков ресурса:
       <sch:value-of select="count($resourceLanguages)"/>.
     </sch:diagnostic>
 
@@ -1596,6 +1974,8 @@
   <sch:pattern id="rule.mri.defaultlocalewhenhastext">
 
     <sch:title xml:lang="en">Resource language</sch:title>
+	
+    <sch:title xml:lang="ru">Язык описываемого ресурса</sch:title>
 
     <sch:title xml:lang="fr">Langue de la ressource</sch:title>
 
@@ -1620,11 +2000,11 @@
 
 
       <sch:assert test="$hasAtLeastOneLanguage"
-                  diagnostics="rule.mri.defaultlocalewhenhastext-failure-en          rule.mri.defaultlocalewhenhastext-failure-fr"/>
+                  diagnostics="rule.mri.defaultlocalewhenhastext-failure-en     rule.mri.defaultlocalewhenhastext-failure-ru      rule.mri.defaultlocalewhenhastext-failure-fr"/>
 
 
       <sch:report test="$hasAtLeastOneLanguage"
-                  diagnostics="rule.mri.defaultlocalewhenhastext-success-en          rule.mri.defaultlocalewhenhastext-success-fr"/>
+                  diagnostics="rule.mri.defaultlocalewhenhastext-success-en     rule.mri.defaultlocalewhenhastext-success-ru      rule.mri.defaultlocalewhenhastext-success-fr"/>
 
     </sch:rule>
 
@@ -1635,6 +2015,11 @@
       service metadata SHALL refer to the service
       taxonomy defined in ISO19119 defining one or more value in the
       keyword section.
+    </sch:diagnostic>
+	
+    <sch:diagnostic id="rule.mri.servicetaxonomy-failure-ru" xml:lang="ru">В описании 'сервиса'
+      в разделе Ключевых слов ДОЛЖНЫ быть указаны виды поддерживаемых сервисов
+	  в соответствии с ISO 19119.
     </sch:diagnostic>
 
     <sch:diagnostic id="rule.mri.servicetaxonomy-failure-fr" xml:lang="fr">Une
@@ -1648,6 +2033,11 @@
       Number of service taxonomy specified:
       <sch:value-of select="count($serviceTaxonomies)"/>.
     </sch:diagnostic>
+	
+    <sch:diagnostic id="rule.mri.servicetaxonomy-success-ru" xml:lang="ru">
+      Количество видов поддерживаемых сервисов:
+      <sch:value-of select="count($serviceTaxonomies)"/>.
+    </sch:diagnostic>
 
     <sch:diagnostic id="rule.mri.servicetaxonomy-success-fr" xml:lang="fr">
       Nombre de types de service :
@@ -1659,6 +2049,8 @@
 
     <sch:title xml:lang="en">Service taxonomy</sch:title>
 
+    <sch:title xml:lang="ru">Поддерживаемые сервисы (по ISO 19119)</sch:title>
+	
     <sch:title xml:lang="fr">Taxonomie des services</sch:title>
 
     <!--
@@ -1683,7 +2075,7 @@
 
 
       <sch:report test="$hasAtLeastOneTaxonomy"
-                  diagnostics="rule.mri.servicetaxonomy-success-en                       rule.mri.servicetaxonomy-success-fr"/>
+                  diagnostics="rule.mri.servicetaxonomy-success-en           rule.mri.servicetaxonomy-success-ru            rule.mri.servicetaxonomy-success-fr"/>
 
     </sch:rule>
 

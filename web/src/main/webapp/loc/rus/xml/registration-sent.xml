@@ -1,34 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <strings>
-  <heading>Registration was successful</heading>
-  <message>Your registration was successful, please check your username and password in your e-mail.
-    Thanks.
+  <heading>Регистрация прошла успешно</heading>
+  <message>Ваша регистрация прошла успешно, проверьте логин и пароль в электронном письме.
+    Спасибо.
   </message>
   <errorEmailAddressAlreadyRegistered>
-    <p>Sorry, registration has
-      <font class="error">FAILED</font>
-      because you are already a registered user.
+    <p>К сожалению, зарегистрироваться
+      <font class="error">НЕ УДАЛОСЬ</font>
+      потому что Вы уже зарегистрированный пользователь.
     </p>
-    <p>If you have forgotten your password, please contact the helpdesk at
+    <p>Если вы забыли свой пароль, обратитесь в службу поддержки по Email-адресу
       <a href="mailto:yourname@yoursite.org?subject=Forgotten password">yourname@yoursite.org</a>
-      or ph: xxx-xxxxxxxx
+      или телефону: xxx-xxxxxxxx
     </p>
-    <p>A reset password option will be available soon. If you urgently need to logon and cannot
-      contact the helpdesk then re-register using a slightly different name as an interim measure.
-    </p>
+    <p>Опция сброса пароля будет доступна в ближайшее время</p>
   </errorEmailAddressAlreadyRegistered>
   <errorEmailToAddressFailed>
-    <p>Sorry, registration has
-      <font class="error">FAILED</font>
-      because we could not send an email to the address you gave us.
+    <p>К сожалению, зарегистрироваться
+      <font class="error">НЕ УДАЛОСЬ</font>
+      потому что мы не можем отослать Вам электронное письмо по предоставленному Вами Email-адресу.
     </p>
-    <p>Please check your details and try registering again.</p>
+    <p>Проверьте свои данные и повторите попытку регистрации</p>
   </errorEmailToAddressFailed>
   <errorProfileRequestFailed>
-    <p>Your request for Editor access could not be delivered.</p>
-    <p>Please contact the helpdesk at
+    <p>Ваш запрос на Редакторский доступ не может быть доставлен</p>
+    <p>Пожалуйста, обратитесь в службу поддержки по Email-адресу
       <a href="mailto:yourname@yoursite.org?subject=Forgotten password">yourname@yoursite.org</a>
-      or ph: xxx-xxxxxxxx
+      или телефону: xxx-xxxxxxxx
     </p>
   </errorProfileRequestFailed>
 </strings>

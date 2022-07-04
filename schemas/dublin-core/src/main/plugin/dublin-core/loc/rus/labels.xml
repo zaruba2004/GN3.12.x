@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
   ~ Copyright (C) 2001-2016 Food and Agriculture Organization of the
   ~ United Nations (FAO-UN), United Nations World Food Programme (WFP)
@@ -32,312 +31,401 @@
   <!-- ==================================================== -->
   <element name="dc:title">
     <label>Название</label>
-    <description/>
+    <description>Имя ресурса. Обычно, Название - это имя под кторым ресурс известен</description>
   </element>
   <!-- ==================================================== -->
   <element name="dc:creator">
     <label>Автор</label>
-    <description/>
+    <description>Субъект изначально создавший содержание ресурса</description>
+    <example>Автор - это персона, организация или сервис. Обычное значение - это
+      имя (название) Автора, используемое для его идентификации
+    </example>
   </element>
   <!-- ==================================================== -->
   <element name="dc:subject">
-    <label>Тема и ключевые слова</label>
-    <description/>
+    <label>Категории и Ключевые слова</label>
+    <btnClass>fa fa-tag</btnClass>
+    <btnLabel>Добавить</btnLabel>
+    <description>Тема, к которой относится содержание ресурса. Обычно, Категория выражается
+      ключевыми словами, фразами или классификационными кодами, которые описывают тему ресурса
+    </description>
+    <example>Рекомендуемая лучшая практика - это значение определённого словаря или
+    какой-то классификации
+    </example>
   </element>
   <!-- ==================================================== -->
   <element name="dc:description">
-    <label>Описание</label>
-    <description/>
+    <label>Резюме</label>
+    <description>Описание содержания ресурса</description>
+    <example>Примеры Резюме: собственно резюме, перечень содержания, ссылка на графическое изображение
+      содержания, неформальное описание содержания и т.п.
+    </example>
   </element>
   <!-- ==================================================== -->
   <element name="dc:publisher">
     <label>Издатель</label>
-    <description/>
+    <description>Сущность, делающая ресурс доступным.</description>
+    <example>Человек, организация или сервис; обычно совпадает с именем человека,
+      названием организации или сервиса
+    </example>
   </element>
   <!-- ==================================================== -->
   <element name="dc:contributor">
     <label>Участник</label>
-    <description/>
+    <description>Сущность, участвующая в создании содержимого ресурса.
+    </description>
+    <example>Человек, организация или сервис; обычно совпадает с именем человека,
+     названием организации или сервиса
+    </example>
   </element>
   <!-- ==================================================== -->
   <element name="dc:date">
     <label>Дата</label>
-    <description/>
+    <description>Дата события в жизненном цикле ресурса. Обычно ассоциируется с
+      моментом создания или доступности ресурса
+    </description>
+    <example>Рекомендуется представлять дату в соответствии со схемой кодирования,
+      такой как профиль W3CDTF ISO 8601 [W3CDTF], которая(среди прочего) предлагает
+      представлять даты в форме YYYY-MM-DD
+    </example>
   </element>
   <!-- ==================================================== -->
   <element name="dc:type">
-    <label>Тип ресурса</label>
-    <description/>
+    <label>Тип</label>
+    <description>Вид или жанр содержимого ресурса.</description>
+    <example>Рекомендуется выбирать значение из определенного словаря, такого как DCMI Type Vocabulary [DCMITYPE].
+      Физическое или цифровое представление ресурса определяется элементом 'format'
+    </example>
+    <helper>
+      <option value="Collection">Коллекция</option>
+      <option value="Dataset">Набор данных</option>
+      <option value="Event">Событие</option>
+	  <option value="Image">Изображение</option>
+      <option value="Service">Сервис</option>
+	  <option value="Software">Программное обеспечение</option>
+	  <option value="Sound">Звукозапись</option>
+	  <option value="StillImage">Плакат</option>
+	  <option value="Text">Текст</option>
+    </helper>
   </element>
   <!-- ==================================================== -->
   <element name="dc:format">
     <label>Формат</label>
-    <description/>
+    <description>Физическое или цифровое представление ресурса, измерение.</description>
+    <example>Измерение может быть, например, размером или продолжительностью. Рекомендуется выбирать значение
+      из определенного словаря, например, списка типов данных Интернет [MIME]
+    </example>
   </element>
   <!-- ==================================================== -->
   <element name="dc:identifier">
-    <label>Идентификатор ресурса</label>
-    <description/>
+    <label>Идентификатор</label>
+    <description>Конкретная ссылка на ресурс в данном контексте.</description>
+    <example>Рекомендуется определять ресурс при помощи строки или числа, удовлетворяющего формальной
+      системе идентификации, напаример: Uniform Resource Identifier (URI), включая Uniform Resource Locator
+      (URL), Digital Object Identifier (DOI), International Standard Book Number (ISBN)
+    </example>
   </element>
   <!-- ==================================================== -->
   <element name="dc:source">
     <label>Источник</label>
-    <description/>
+    <description>Ресурс, на основе которого составлен данный ресурс. Ресурс может быть составленным
+      из Источника частично или полностью.</description>
+    <example>Рекомендуется определять Источник при помощи строки или числа, удовлетворяющего
+      формальной системе идентификации
+    </example>
   </element>
   <!-- ==================================================== -->
   <element name="dc:language">
     <label>Язык</label>
-    <description/>
+    <description>Национальный язык содержимого. Рекомендуется выбирать значение из определенного словаря,
+      такого как RFC 3066 [RFC3066].</description>
+    <example>Например: "en" или "eng" для Английского, "ru" или "rus" - для Русского
+    </example>
   </element>
   <!-- ==================================================== -->
   <element name="dc:relation">
-    <label>Relation</label>
+    <label>Связь</label>
+    <description>Связанный ресурс.</description>
+    <example>Рекомендуется определять при помощи строки или числа,
+      удовлетворяющего формальной системе идентификации
+    </example>
+  </element>
+  <element name="dc:URI">
+    <label>URI</label>
     <description/>
+    <example/>
   </element>
   <!-- ==================================================== -->
   <element name="dc:coverage">
-    <label>Покрытие</label>
-    <description>Например: "Север 90, Юг -90, Восток 180, Запад -180. Глобальное"
+    <label>Экстент</label>
+    <description>Пространственные или временные границы ресурса, пространственная применимость
+      ресурса, либо подведомственная область, в рамках которой ресурс действителен. Пространственные
+      границы могут задаваться именованным местом, либо положением, определенным географическими координатами.
+      Именованное место — административная область или географическое место, где ресурс применим.
+	  Временной период может задаваться названием, датой или набором дат 
     </description>
+    <example>Например: "Север 90, Юг -90, Восток 180, Запад -180. Глобальный экстент".
+      Рекомендуется использовать контролируемый словарь, такой как Thesaurus of Geographic Names [TGN].
+      Там, где это возможно, именованные места и периоды следует предпочесть числовым идентификаторам
+	  вроде наборов координат и дат
+    </example>
   </element>
   <!-- ==================================================== -->
   <element name="dc:rights">
-    <label>Управление правами</label>
-    <description/>
+    <label>Правовая информация</label>
+    <description>Правовая информация, связанная с ресурсом.</description>
+    <example>Обычно содержит правовые соглашения касательно ресурса, включая информацию о правах
+      на интеллектуальную собственность. Правовая информация часто охватывает
+      Intellectual Property Rights (IPR), Copyright, и различные Property Rights
+    </example>
   </element>
   <!-- ==================================================== -->
   <element name="dct:modified">
-    <label>Дата измененния</label>
-    <description>Дата, когда были изменены метаданные</description>
+    <label>Изменен</label>
+    <description>Дата изменения ресурса</description>
+  </element>
+  <element name="dct:created">
+    <label>Создан</label>
+    <description>Дата создания ресурса</description>
+  </element>
+  <element name="dct:dateSubmitted">
+    <label>Дата отправки</label>
+    <description>Дата отправки ресурса.</description>
+    <example>Например: тезисов, статей, и т. д.</example>
   </element>
   <!-- ==================================================== -->
   <element name="dct:abstract">
-    <label>Реферат</label>
-    <description>Краткое описание содержимого описываемого ресурса.
-    </description>
+    <label>Резюме</label>
+    <description>Краткое изложение содержимого ресурса</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:spatial">
-    <label>Территориально</label>
-    <description>Пространственные характеристики содержимого ресурса.</description>
+    <label>Пространственные характеристики</label>
+    <description>Пространственные характеристики содержимого ресурса</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:audience">
     <label>Целевая аудитория</label>
-    <description>Класс лиц, для которых ресурс может быть интересен или полезен.</description>
+    <description>Класс или сущность, для которого предназначен или полезен ресурс.
+      Может определяться Автором, Издателем, либо третьими лицами</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:accrualMethod">
     <label>Метод пополнения</label>
-    <description>Метод, которым элементы добавляются в коллекцию.</description>
+    <description>Метод, при помощи которого элементы добавляются в коллекцию</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:accrualPeriodicity">
     <label>Периодичность пополнения</label>
-    <description>Частота, с которой элементы добавляются в коллекцию.</description>
+    <description>Частота, с которой элементы добавляются в коллекцию</description>
+    <helper>
+      <option value="continual">постоянно</option>
+      <option value="daily">ежедневно</option>
+      <option value="weekly">еженедельно</option>
+      <option value="fortnightly">раз в полмесяца</option>
+      <option value="monthly">ежемесячно</option>
+      <option value="quarterly">ежеквартально</option>
+      <option value="biannually">раз в полгода</option>
+      <option value="annually">ежегодно</option>
+      <option value="asNeeded">при необходимости</option>
+      <option value="irregular">нерегулярно</option>
+      <option value="notPlanned">не запланировано</option>
+      <option value="unknown">неизвестно</option>
+    </helper>
   </element>
   <!-- ==================================================== -->
   <element name="dct:accrualPolicy">
     <label>Политика пополнения</label>
-    <description>Политика руководства по добавлению элементов в коллекцию.</description>
+    <description>Политика, управляющая добавлением элементов в коллекцию</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:instructionalMethod">
-    <label>Учебный метод</label>
-    <description>Процесс, используемый инженером знаний, навыки и установки,
-      разработанные для поддержания ресурса..
-    </description>
+    <label>Метод обучения</label>
+    <description>Процесс получения знаний и умений, который использует ресурс.</description>
+    <example>Как правило, Метод обучения включает способы представления обучающих материалов
+      или проведения обучающих мероприятий; общения между учениками, между учениками и учителем;
+      оценки группового и индивидуального уровня знаний. Методы обучения включают все учебно-
+      воспитательные аспекты от планирования и реализации до оценки и отзывов</example>
   </element>
   <!-- ==================================================== -->
   <element name="dct:provenance">
     <label>Происхождение</label>
-    <description>Утверждение любых изменений в собственности и пепечении
-      ресурса с момента его создания, которые были обозначены для его подлинности,
-      целостности и интерпретации.
+    <description>Указание любых изменений во владении ресурсом и его поддержке со времени создания,
+      которые значимы для достоверности, полноты и толкования
     </description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:rightsHolder">
     <label>Правообладатель</label>
-    <description>Человек или организация вледеющие или управляющие
-      правами над ресурсом.
-    </description>
+    <description>Частное лицо или организация, владеющие правами на ресурс,
+      либо регулирующие таковые</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:references">
-    <label>Related resource</label>
-    <description>A related resource that is referenced, cited, or otherwise pointed to by the
-      described resource.
+    <label>Ссылается</label>
+    <description>Указанный ресурс цитируется описываемым ресурсом,
+      описываемый ресурс содержит ссылку на указанный, и т. д.
     </description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:accessRights">
-    <label>Access Rights</label>
-    <description>Information about who can access the resource or an indication of its security
-      status.
+    <label>Права доступа</label>
+    <description>Информация о том, кто может иметь доступ к ресурсу,
+      либо указание его статуса безопасности
     </description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:alternative">
-    <label>Alternative Title</label>
-    <description>An alternative name for the resource.</description>
+    <label>Альтернативное название</label>
+    <description>Любой вид наименования, используемый как замена или
+      альтернатива формального наименования ресурса.</description>
+    <example>Может включать сокращение Заголовка или его перевод</example>
   </element>
   <!-- ==================================================== -->
   <element name="dct:bibliographicCitation">
-    <label>Bibliographic Citation</label>
-    <description>A bibliographic reference for the resource.</description>
+    <label>Библиографическая ссылка</label>
+    <description>Библиографическая ссылка для ресурса</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:conformsTo">
-    <label>Conforms To</label>
-    <description>An established standard to which the described resource conforms.</description>
+    <label>Соответствует</label>
+    <description>Ссылка на принятый стандарт, которому соответствует ресурс</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:created">
-    <label>Date Created</label>
-    <description>Date of creation of the resource.</description>
+    <label>Дата создания</label>
+    <description>Дата создания ресурса</description>
   </element>
-  <!-- ==================================================== -->
+   <!-- ==================================================== --> 
   <element name="dct:dateAccepted">
-    <label>Date Accepted</label>
-    <description>Date of acceptance of the resource.</description>
+    <label>Дата принятия</label>
+    <description>Дата принятия ресурса (например, тезисов университетским факультетом,
+      статьи журналом, и т. д.)</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:dateCopyrighted">
-    <label>Date Copyrighted</label>
-    <description>Date of copyright.</description>
+    <label>Дата установления авторского права</label>
+    <description>Дата установления авторского права</description>
   </element>
   <!-- ==================================================== -->
-  <element name="dct:dateSubmitted">
-    <label>Date Submitted</label>
-    <description>Date of submission of the resource.</description>
+   <element name="dct:dateSubmitted">
+    <label>Дата поставки</label>
+    <description>Дата предоставления ресурса</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:educationLevel">
-    <label>Audience Education Level</label>
-    <description>A class of entity, defined in terms of progression through an educational or
-      training context, for which the described resource is intended.
+    <label>Уровень образования аудитории</label>
+    <description>Общее положение, описывающее учебный или воспитательный контекст,
+       либо более специальное указание уровня аудитории в образовательном или воспитательном процессе
     </description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:extent">
-    <label>Extent</label>
-    <description>The size or duration of the resource.</description>
+    <label>Протяженность</label>
+    <description>Размер или продолжительность ресурса</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:hasFormat">
-    <label>Has Format</label>
-    <description>A related resource that is substantially the same as the pre-existing described
-      resource, but in another format.
+    <label>Имеет формат</label>
+    <description>Описываемый ресурс появился до указанного, и последний
+      представляет собой по существу ту же информацию в другом формате
     </description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:hasPart">
-    <label>Has Part</label>
-    <description>A related resource that is included either physically or logically in the described
-      resource.
-    </description>
+    <label>Имеет часть</label>
+    <description>Описываемый ресурс физически или логически включает указанный</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:hasVersion">
-    <label>Has Version</label>
-    <description>A related resource that is a version, edition, or adaptation of the described
-      resource.
-    </description>
+    <label>Имеет версию</label>
+    <description>У описываемого ресурса есть версии, издания, переделки, в частности, указываемый ресурс</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:isFormatOf">
-    <label>Is Format Of</label>
-    <description>A related resource that is substantially the same as the described resource, but in
-      another format.
-    </description>
+    <label>Является форматом</label>
+    <description>Описываемый ресурс представляет собой по существу ту же информацию, что и указанный, но в другом формате</description>
   </element>
-  <!-- ==================================================== -->
+   <!-- ==================================================== -->
   <element name="dct:isPartOf">
-    <label>Is Part Of</label>
-    <description>A related resource in which the described resource is physically or logically
-      included.
-    </description>
+    <label>Является частью</label>
+    <description>Описываемый ресурс физически или логически является частью указанного</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:isReferencedBy">
-    <label>Is Referenced By</label>
-    <description>A related resource that references, cites, or otherwise points to the described
-      resource.
-    </description>
+    <label>Цитируется</label>
+    <description>Описываемый ресурс цитируется указанным ресурсом, указанный ресурс содержит ссылку на описываемый, и т. д.</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:isReplacedBy">
-    <label>Is Replaced By</label>
-    <description>A related resource that supplants, displaces, or supersedes the described
-      resource.
-    </description>
+    <label>Заменен</label>
+    <description>Описываемый ресурс заменен указанным.</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:isRequiredBy">
-    <label>Is Required By</label>
-    <description>A related resource that requires the described resource to support its function,
-      delivery, or coherence.
-    </description>
+    <label>Требуется</label>
+    <description>Указанный ресурс требует описываемый, физически либо логически</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:isVersionOf">
-    <label>Is Version Of</label>
-    <description>A related resource of which the described resource is a version, edition, or
-      adaptation.
+    <label>Является версией</label>
+    <description>Описываемый ресурс является версией, изданием, переделкой указанного ресурса.
+       Изменения в версии касаются содержимого и существенны, а не связаны только с форматом
     </description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:issued">
-    <label>Date Issued</label>
-    <description>Date of formal issuance (e.g., publication) of the resource.</description>
+    <label>Выпущен</label>
+    <description>Дата выпуска ресурса (например, публикации)</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:license">
-    <label>License</label>
-    <description>A legal document giving official permission to do something with the resource.
-    </description>
+    <label>Лицензия</label>
+    <description>Правовой документ, дающий официальное разрешение делать что-либо с ресурсом.</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:mediator">
-    <label>Mediator</label>
-    <description>An entity that mediates access to the resource and for whom the resource is
-      intended or useful.
+    <label>Среда передачи</label>
+    <description>Разновидность сущности, предоставляющей доступ к ресурсу, для которой ресурс
+      предназначен или полезен. Аудитория ресурса делится на конечных пользователей и переносчиков.
+      Данной единицей задаются сущности-переносчики
     </description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:medium">
-    <label>Medium</label>
-    <description>The material or physical carrier of the resource.</description>
+    <label>Носитель</label>
+    <description>TФизический носитель ресурса</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:replaces">
-    <label>Replaces</label>
-    <description>A related resource that is supplanted, displaced, or superseded by the described
-      resource.
-    </description>
+    <label>Заменяет</label>
+    <description>Указанный ресурс заменен описываемым</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:requires">
-    <label>Requires</label>
-    <description>A related resource that is required by the described resource to support its
-      function, delivery, or coherence.
-    </description>
+    <label>Требует</label>
+    <description>Описываемый ресурс требует указанный для поддержания функциональности
+      и связности содержимого, либо для его доставки</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:tableOfContents">
-    <label>Table Of Contents</label>
-    <description>A list of subunits of the resource.</description>
+    <label>Содержание</label>
+    <description>Список содержания ресурса</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:temporal">
-    <label>Temporal Coverage</label>
-    <description>Temporal characteristics of the resource.</description>
+    <label>Временные характеристики</label>
+    <description>Временные характеристики содержимого ресурса</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:valid">
-    <label>Date Valid</label>
-    <description>Date (often a range) of validity of a resource.</description>
+    <label>Действителен</label>
+    <description>Дата (часто — период) действительности ресурса</description>
+  </element>
+  <!-- ==================================================== -->
+  <element name="dct:available">
+    <label>Доступность</label>
+    <description>Дата (часто диапазон)? когда ресурс стал или станет доступным</description>
   </element>
   <!-- ==================================================== -->
 </labels>

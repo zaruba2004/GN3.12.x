@@ -1,0 +1,14 @@
+{
+  "abstract": "Резюме",
+  "complete": "Полностью",
+  "hierarchy": "Иерархия",
+  "links": "Связи",
+  "noUuidInLink": "Связь без uuid",
+  "overview": "Обзор",
+  "parent": "Родитель (предок)",
+  "testString": "Тестовая строка - не удалять!",
+  "xml": "XML",
+  "uncategorizedKeywords": "Не категорировано",
+  "uncategorized" : "Не категорировано",
+  "related-link": "Отношения"
+}

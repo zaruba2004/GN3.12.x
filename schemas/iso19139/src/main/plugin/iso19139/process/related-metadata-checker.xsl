@@ -45,6 +45,8 @@
     <msg id="b" xml:lang="dut">). Functie verwijdert de link.</msg>
     <msg id="a" xml:lang="ita">non trovato (</msg>
     <msg id="b" xml:lang="ita">). Lancia questo processo per eliminarlo.</msg>
+    <msg id="a" xml:lang="rus">не найдена (</msg>
+    <msg id="b" xml:lang="rus">). Запустите задачу для удаления ссылки.</msg>
   </xsl:variable>
 
   <xsl:template name="list-related-metadata-checker">

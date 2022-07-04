@@ -30,10 +30,16 @@
   <gns:version>1.0</gns:version>
   <gns:appMinorVersionSupported>3.4.0</gns:appMinorVersionSupported>
   <gns:title xml:lang="en">Dublin core</gns:title>
-  <gns:description>The Dublin Core Metadata Element Set is a vocabulary of fifteen properties for
+  <gns:title xml:lang="ru">"Дублинское ядро"</gns:title>
+  <gns:description xml:lang="en">The Dublin Core Metadata Element Set is a vocabulary of fifteen properties for
     use in resource description. The name "Dublin" is due to its origin at a 1995 invitational
     workshop in Dublin, Ohio; "core" because its elements are broad and generic, usable for
     describing a wide range of resources.
+  </gns:description>
+  <gns:description xml:lang="ru">Набор метаданных Дублинского ядра использует 18 параметров для описания ресурсов.Название
+    "Дублинское ядро" происходит от места разработки методики - г.Дублин, штат Огайо; 
+    "ядро" - из-за того, что этот набор параметров самый общий и распространенный при описании
+    широкого перечня ресурсов.
   </gns:description>
   <gns:standardUrl>http://dublincore.org/documents/dces/</gns:standardUrl>
   <gns:schemaLocation/>

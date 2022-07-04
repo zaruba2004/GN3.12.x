@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<i18n>
+  <viewInGE>Вид в Google Earth</viewInGE>
+  <warning>Внимание!</warning>
+  <addA>Добавить</addA>
+  <nojs>Javascript не активирован. Запустите его или нажмите
+    <a
+      href="../search">здесь для поиска
+    </a>
+    в ухудшенном режиме
+  </nojs>
+  <selectView>Выберите вид</selectView>
+  <moreTabs>Больше информации</moreTabs>
+  <nodeChangeWarning>Сообщение об изменении узла</nodeChangeWarning>
+  <nodeChangeInfo>Внимание: Вы уже не на том узле, в котором зарегистрировались.</nodeChangeInfo>
+  <nodeChangeBack>Если желаете вернуться на узел регистрации нажмите:</nodeChangeBack>
+  <nodeChangeForward>Если хотите выйти из системы и вернуться к предыдущему URL-адресу нажмите:</nodeChangeForward>
+  <serviceNotAllowedTitle>Сервис не доступен</serviceNotAllowedTitle>
+  <serviceNotAllowed>Этот сервис {1} не существует или у Вас нет прав доступа к нему.</serviceNotAllowed>
+  <linkToHome>
+    <span>Назад к <a href="../..">странице поиска</a>.
+    </span>
+  </linkToHome>
+</i18n>

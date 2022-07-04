@@ -277,5 +277,15 @@
     <suggest name="gmd:useLimitation"/>
   </field>
 
+  <!-- новые уточнения: -->
+  
+  <field name="gmd:identifier">
+    <suggest name="gmd:MD_Identifier"/>
+  </field>
+
+  <field name="gmd:verticalCRS">
+    <suggest name="gml:VerticalCRS"/>
+    <suggest name="gmx:ML_VerticalCRS"/>
+  </field>  
 
 </fields>

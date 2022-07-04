@@ -203,6 +203,9 @@
     <msg id="a" xml:lang="fre">Thèmes INSPIRE et/ou des catégories ont été trouvés avec des
       correspondances manquantes. Lancer ce processus pour ajouter les correspondances.
     </msg>
+    <msg id="a" xml:lang="rus">Найдена тема и/или категория INSPIRE с пропущенными значениями.
+       Запустите задачу, чтобы добавить все соответствующие значения.
+    </msg>
   </xsl:variable>
 
 

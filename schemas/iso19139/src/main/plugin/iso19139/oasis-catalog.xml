@@ -42,6 +42,11 @@
        GeoNetwork edits and validates against a schema it knows about. -->
 
   <system
+    systemId="http://schemas.opengis.net/csw/2.0.2/profiles/apiso/1.0.0/apiso.xsd"
+    uri="schema2007/apiso/apiso.xsd"/>
+
+
+  <system
     systemId="http://standards.iso.org/ittf/PubliclyAvailableStandards/ISO_19139_Schemas/gmd/gmd.xsd"
     uri="schema2007/gmd/gmd.xsd"/>
   <system

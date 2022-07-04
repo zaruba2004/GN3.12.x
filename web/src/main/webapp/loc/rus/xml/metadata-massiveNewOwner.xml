@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <strings>
-  <groups>Valitse ryhmä, johon käyttäjä kuuluu.</groups>
-  <notfound>Metatietoja ei löydy.</notfound>
-  <notowner>Et voi muuttaa metatietojen omistajaa, koska et ole niiden alkuperäinen omistaja.
-  </notowner>
-  <updated>Omistaja vaihdettu.</updated>
-  <resultstitle>Omistajanvaihdon tulokset</resultstitle>
-  <users>Valitse uusi omistaja.</users>
+  <groups>Выберите группу, к которой принадлежит пользователь</groups>
+  <notfound>Метаданные не могут быть найдены</notfound>
+  <notowner>Вы не можете изменить владельца метаданных, потому что Вы не являетесь их первоначальным владельцем</notowner>
+  <updated>Владелец метаданных изменен</updated>
+  <resultstitle>Результат изменения владельца</resultstitle>
+  <users>Выберите нового владельца</users>
 </strings>

@@ -56,6 +56,9 @@
     <msg id="a" xml:lang="ita">Un servizio OGC WMS o WFS</msg>
     <msg id="b" xml:lang="ita">è descritto nella sezione delle risorse online. 
         Lancia questo processo per aggiungere le informazioni sulle operazioni disponibili.</msg>
+    <msg id="a" xml:lang="rus">OGC WMS или WFS-сервис</msg>
+    <msg id="b" xml:lang="rus">есть в ссылках на online-ресуры. Запустите задачу для
+      добавления оперативной информации</msg>
   </xsl:variable>
 
   <!-- Process parameters and variables-->

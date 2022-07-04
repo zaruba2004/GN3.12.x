@@ -31,6 +31,7 @@
   <appMinorVersionSupported>3.4.0</appMinorVersionSupported>
   <title xml:lang="en">Geographic information -- Metadata (iso19139:2007)</title>
   <title xml:lang="fr">Information géographique -- Métadonnées (iso19139:2007)</title>
+  <title xml:lang="ru">Географическая информация - Метаданные (iso19139:2007)</title>
   <description xml:lang="en">
     ISO 19115 defines the schema required for describing geographic information and services by
     means of metadata. It provides information about the identification, the extent, the quality,
@@ -62,6 +63,24 @@
     many other types of resources such as maps, charts, and textual documents as well as
     non-geographic data. Certain conditional metadata elements might not apply to these other forms
     of data.
+  </description>
+  <description xml:lang="ru">
+    ISO 19115 определяет схему описания географической информации и услуг с помощью метаданных.
+    Он содержит информацию об идентификации, объеме, качестве, пространственных и временных аспектах,
+    содержании, пространственной привязке, изображении, распределении и других свойствах цифровых
+    географических данных и услуг. ISO 19115 применим для каталогизации (подробного описания):
+    - роазнообразных ресурсов, деятельности клиринговых палат, наборов данных и услуг;
+    - географических служб, наборов, серий данных, отдельных пространственных объектов и их свойств.
+    ISO 19115 определяет:
+    - разделы обязательных и условных метаданных, объекты метаданных и элементы метаданных;
+    - минимальный набор метаданных, необходимый для обслуживания большинства приложений метаданных
+      (обнаружение, определение пригодности данных для использования, доступ, передача и использование
+      цифровых данных и услуг);
+    - необязательные элементы метаданных, позволяющие при необходимости дать подробное описание ресурсов;
+    - метод расширения метаданных для удовлетворения особых требований. 
+    Хотя ISO 19115 применим к цифровым данным и услугам, его принципы могут быть распространены на
+    многие другие виды ресурсов, такие как карты, диаграммы и текстовые документы, а также негеографические
+    данные. Некоторые условные элементы метаданных могут не применяться к этим другим видам данных.
   </description>
   <standardUrl>https://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=53798
   </standardUrl>

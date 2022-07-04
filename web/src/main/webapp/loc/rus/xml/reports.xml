@@ -1,70 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <strings>
   <updatedRecords>
-    <username>Owner (User name)</username>
-    <surname>Owner (Last name)</surname>
-    <name>Owner (First name)</name>
-    <email>Owner (Email)</email>
-    <groupName>Owner Group</groupName>
-    <groupOwnerMail>OwnerGroup (Admin Email)</groupOwnerMail>
-    <changedate>Last Updated Date</changedate>
-    <recordName>Record Name</recordName>
-    <uuid>Metadata uuid</uuid>
+    <username>Владелец (Имя пользователя)</username>
+    <surname>Владелец (Фамилия)</surname>
+    <name>Владелец (Имя)</name>
+    <email>Владелец (Email)</email>
+    <groupName>Группа Владельца</groupName>
+    <groupOwnerMail>Группа Владельца (Admin Email)</groupOwnerMail>
+    <changedate>Дата последнего обновления</changedate>
+    <recordName>Название записи</recordName>
+    <uuid>UUID метаданных</uuid>
   </updatedRecords>
 
   <internalRecords>
-    <username>Owner (User name)</username>
-    <surname>Owner (Last name)</surname>
-    <name>Owner (First name)</name>
-    <email>Owner (Email)</email>
-    <profile>Owner (User Role)</profile>
-    <groupName>Owner Group (Name)</groupName>
-    <groupOwnerMail>Owner Group (Admin Email)</groupOwnerMail>
-    <createdate>Creation Date</createdate>
-    <recordName>Record Name</recordName>
-    <uuid>Metadata uuid</uuid>
+    <username>Владелец (Имя пользователя)</username>
+    <surname>Владелец (Фамилия)</surname>
+    <name>Владелец (Имя)</name>
+    <email>Владелец (Email)</email>
+    <profile>Владелец (Роль пользователя)</profile>
+    <groupName>Группа Владельца (Имя)</groupName>
+    <groupOwnerMail>Группа Владельца (Admin Email)</groupOwnerMail>
+    <createdate>Дата создания</createdate>
+    <recordName>Название записи</recordName>
+    <uuid>UUID метаданных</uuid>
   </internalRecords>
 
   <users>
-    <username>User name</username>
-    <surname>Last name</surname>
-    <name>First name</name>
+    <username>Имя пользователя</username>
+    <surname>Фамилия</surname>
+    <name>Имя</name>
     <email>Email</email>
-    <userGroups>Groups/User Roles</userGroups>
-    <lastlogindate>Last Login Date</lastlogindate>
+    <userGroups>Группы/Пользовательские роли</userGroups>
+    <lastlogindate>Дата последнего входа в систему</lastlogindate>
   </users>
 
   <dataDownloads>
-    <username>Uploader (User name)</username>
-    <surname>Uploader (Last name)</surname>
-    <name>Uploader (First name)</name>
-    <email>Uploader (Email)</email>
-    <profile>Uploader (User Role)</profile>
-    <userGroups>Group</userGroups>
-    <uploadname>Product Name</uploadname>
-    <filename>File Name</filename>
-    <downloaddate>Download Date</downloaddate>
-    <recordName>Record Name</recordName>
-    <uuid>Metadata uuid</uuid>
-    <requestername>Requester Name</requestername>
-    <requestermail>Requester Mail</requestermail>
-    <requesterorg>Requester Organization</requesterorg>
-    <requestercomments>Requester Comments</requestercomments>
-    <expiry_datetime>Expiry Date</expiry_datetime>
+    <username>Загрузившее лицо (Имя пользователя)</username>
+    <surname>Загрузившее лицо (Фамилия)</surname>
+    <name>Загрузившее лицо (Имя)</name>
+    <email>Загрузившее лицо (Email)</email>
+    <profile>Загрузившее лицо (Роль пользователя)</profile>
+    <userGroups>Группа</userGroups>
+    <uploadname>Наименование продукта</uploadname>
+    <filename>Название файла</filename>
+    <downloaddate>Дата скачивания</downloaddate>
+    <recordName>Название записи</recordName>
+    <uuid>UUID метаданных</uuid>
+    <requestername>Имя запрашивающего лица</requestername>
+    <requestermail>еMail запрашивающего лица</requestermail>
+    <requesterorg>Организация запрашивающего лица</requesterorg>
+    <requestercomments>Комментарий запрашивающего лица</requestercomments>
+    <expiry_datetime>Срок действия</expiry_datetime>
   </dataDownloads>
 
   <dataUploads>
-    <username>Uploader (Username)</username>
-    <surname>Uploader (Last name)</surname>
-    <name>Uploader (First name)</name>
-    <email>Uploader (Email)</email>
-    <profile>Uploader (Role)</profile>
-    <userGroups>Group</userGroups>
-    <uploaddesc>Product Name</uploaddesc>
-    <filename>File Name</filename>
-    <uploaddate>Upload Date</uploaddate>
-    <recordname>Record Name</recordname>
-    <uuid>Metadata uuid</uuid>
-    <expiry_datetime>Expiry Date</expiry_datetime>
+    <username>Загрузившее лицо (Username)</username>
+    <surname>Загрузившее лицо (Фамилия)</surname>
+    <name>Загрузившее лицо (Имя)</name>
+    <email>Загрузившее лицо (Email)</email>
+    <profile>Загрузившее лицо (Role)</profile>
+    <userGroups>Группа</userGroups>
+    <uploaddesc>Наименование продукта</uploaddesc>
+    <filename>Название файла</filename>
+    <uploaddate>Дата загрузки</uploaddate>
+    <recordname>Название записи</recordname>
+    <uuid>UUID метаданных</uuid>
+    <expiry_datetime>Срок действия</expiry_datetime>
   </dataUploads>
 </strings>

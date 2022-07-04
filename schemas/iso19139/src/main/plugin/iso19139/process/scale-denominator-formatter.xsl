@@ -41,6 +41,8 @@
     <msg id="b" xml:lang="dut">. Voer deze functie uit om het bij te werken.</msg>
     <msg id="a" xml:lang="ita">Questi valori non sono raccomandati per il denomitaore di scala: </msg>
     <msg id="b" xml:lang="ita">. Lancia questo processo per correggerli.</msg>
+    <msg id="a" xml:lang="rus">Следующие значения не рекомендуются для знаменателя масштаба:</msg>
+    <msg id="b" xml:lang="rus">. Запустите задачу, чтобы попытаться исправить значение.</msg>
   </xsl:variable>
 
   <xsl:template name="list-scale-denominator-formatter">

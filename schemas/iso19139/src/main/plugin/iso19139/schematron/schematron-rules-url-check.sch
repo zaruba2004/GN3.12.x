@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron">
 
-    <sch:title xmlns="http://www.w3.org/2001/XMLSchema">URL checks</sch:title>
+    <sch:title xmlns="http://www.w3.org/2001/XMLSchema">Проверка URL</sch:title>
     <sch:ns prefix="gmd" uri="http://www.isotc211.org/2005/gmd" />
     <sch:ns prefix="srv" uri="http://www.isotc211.org/2005/srv" />
     <sch:ns prefix="gco" uri="http://www.isotc211.org/2005/gco" />

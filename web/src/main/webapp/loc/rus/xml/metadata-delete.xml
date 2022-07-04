@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <strings>
-  <heading>Удаленные метаданные</heading>
-  <message>Идентификатор метаданных:</message>
+  <heading>Подтверждение удаления метаданных</heading>
+  <message>ID удалённых метаданных:</message>
 </strings>

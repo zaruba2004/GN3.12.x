@@ -45,6 +45,9 @@
     <msg id="a" xml:lang="ita">Il record corrente non contiene l'identificatore di risorsa. 
       Aggiungi questo identificatore:
     </msg>
+    <msg id="a" xml:lang="rus">В данной записи отсутствует идентификатор ресурса.
+      Добавьте следующий идентификатор:
+    </msg>
   </xsl:variable>
 
 

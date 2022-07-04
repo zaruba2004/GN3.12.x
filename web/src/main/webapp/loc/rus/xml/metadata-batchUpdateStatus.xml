@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <strings>
-  <notfound>Metadata Records not found</notfound>
-  <notowner>Metadata Records that did not have status updated because you are not the owner
-  </notowner>
-  <updated>Metadata Records that had their status updated</updated>
-  <resultstitle>Status Update Results</resultstitle>
+  <notfound>Метаданные не могут быть найдены</notfound>
+  <notowner>Статус метаданных не может быть обновлен, потому что Вы не являетесь владельцем метаданных</notowner>
+  <updated>Статус метаданных обновлен</updated>
+  <resultstitle>Результаты обновления статуса</resultstitle>
 </strings>

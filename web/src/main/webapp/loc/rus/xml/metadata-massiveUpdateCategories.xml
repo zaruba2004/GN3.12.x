@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <strings>
-  <notfound>Metatietoja ei löydy.</notfound>
-  <notowner>Metatietojen kategorioita ei päivitetty, koska et ole metatietojen omistaja.</notowner>
-  <updated>Päivitetyt metatiedot</updated>
-  <resultstitle>Kategoriapäivityksen tulokset</resultstitle>
+  <notfound>Метаданные не могут быть найдены</notfound>
+  <notowner>Категории метаданных не не могут быть обновлены, потому что Вы не являетесь владельцем метаданных</notowner>
+  <updated>Категории метаданные обновлены</updated>
+  <resultstitle>Результаты обновления категорий</resultstitle>
 </strings>

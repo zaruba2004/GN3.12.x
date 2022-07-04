@@ -51,6 +51,10 @@
         Lancia questo processo per aggiornare l'estensione, il CRS o l'anteprima di questo servizio WMS
         con il layer di nome:
     </msg>
+    <msg id="a" xml:lang="rus">WMS-сервис </msg>
+    <msg id="b" xml:lang="rus">есть в ссылках на online-ресуры. Запустите задачу для
+      обновления экстента, СК или превью этого WMS-сервиса слоя с именем:
+    </msg>
   </xsl:variable>
 
   <!-- Process parameters and variables-->

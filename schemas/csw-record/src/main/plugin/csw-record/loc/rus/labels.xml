@@ -26,149 +26,147 @@
         xmlns:csw="http://www.opengis.net/cat/csw/2.0.2" xmlns:dct="http://purl.org/dc/terms/">
   <!-- ==================================================== -->
   <element name="csw:Record">
-    <label>Metadata</label>
+    <label>Метаданные</label>
     <description/>
   </element>
   <!-- ==================================================== -->
   <element name="dc:title">
-    <label>Title</label>
+    <label>Название</label>
     <description/>
   </element>
   <!-- ==================================================== -->
   <element name="dc:creator">
-    <label>Creator</label>
+    <label>Автор</label>
     <description/>
   </element>
   <!-- ==================================================== -->
   <element name="dc:subject">
-    <label>Subject and Keywords</label>
+    <label>Тема</label>
     <description/>
   </element>
   <!-- ==================================================== -->
   <element name="dc:description">
-    <label>Description</label>
+    <label>Описание ресурса</label>
     <description/>
   </element>
   <!-- ==================================================== -->
   <element name="dc:publisher">
-    <label>Publisher</label>
+    <label>Издатель</label>
     <description/>
   </element>
   <!-- ==================================================== -->
   <element name="dc:contributor">
-    <label>Contributor</label>
+    <label>Участник</label>
     <description/>
   </element>
   <!-- ==================================================== -->
   <element name="dc:date">
-    <label>Date</label>
+    <label>Дата</label>
     <description/>
   </element>
   <!-- ==================================================== -->
   <element name="dc:type">
-    <label>Resource Type</label>
+    <label>Тип ресурса</label>
     <description/>
   </element>
   <!-- ==================================================== -->
   <element name="dc:format">
-    <label>Format</label>
+    <label>Формат</label>
     <description/>
   </element>
   <!-- ==================================================== -->
   <element name="dc:identifier">
-    <label>Resource Identifier</label>
+    <label>Идентификатор ресурса</label>
     <description/>
   </element>
   <!-- ==================================================== -->
   <element name="dc:source">
-    <label>Source</label>
+    <label>Источник</label>
     <description/>
   </element>
   <!-- ==================================================== -->
   <element name="dc:language">
-    <label>Language</label>
+    <label>Язык</label>
     <description/>
   </element>
   <!-- ==================================================== -->
   <element name="dc:relation">
-    <label>Relation</label>
+    <label>Связь</label>
     <description/>
   </element>
   <!-- ==================================================== -->
   <element name="dc:coverage">
-    <label>Coverage</label>
-    <description>For example: "North 90, South -90, East 180, West -180. Global"</description>
+    <label>Экстент</label>
+    <description>Например: "Север 90, Юг -90, Восток 180, Запад -180"</description>
   </element>
   <!-- ==================================================== -->
   <element name="dc:rights">
-    <label>Rights Management</label>
+    <label>Права доступа</label>
     <description/>
   </element>
   <!-- ==================================================== -->
   <element name="dct:modified">
-    <label>Date Modified</label>
-    <description>Data metadata was modified</description>
+    <label>Дата измененния</label>
+    <description>Дата, когда были изменены метаданные</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:abstract">
-    <label>Abstract</label>
-    <description>A summary of the content of the resource.</description>
+    <label>Резюме</label>
+    <description>Краткое описание содержимого описываемого ресурса</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:spatial">
-    <label>Spatial</label>
-    <description>Spatial characteristics of the intellectual content of the resource.</description>
+    <label>Пространственные характеристики</label>
+    <description>Пространственные характеристики ресурса</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:audience">
-    <label>Audience</label>
-    <description>A class of entity for whom the resource is intended or useful.</description>
+    <label>Целевая аудитория</label>
+    <description>Класс лиц, для которых ресурс может быть интересен или полезен</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:accrualMethod">
-    <label>Accrual Method</label>
-    <description>The method by which items are added to a collection.</description>
+    <label>Метод сбора</label>
+    <description>Метод, которым элементы добавляются в коллекцию</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:accrualPeriodicity">
-    <label>Accrual Periodicity</label>
-    <description>The frequency with which items are added to a collection.</description>
+    <label>Периодичность сбора</label>
+    <description>Частота, с которой элементы добавляются в коллекцию</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:accrualPolicy">
-    <label>Accrual Policy</label>
-    <description>The policy governing the addition of items to a collection.</description>
+    <label>Политика сбора</label>
+    <description>Политика, управляющая добавлением элементов в коллекцию</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:instructionalMethod">
-    <label>Instructional Method</label>
-    <description>A process, used to engender knowledge, attitudes and skills, that the resource is
-      designed to support.
-    </description>
+    <label>Метод обучения</label>
+    <description>Процесс получения знаний и умений, в котором используется ресурс</description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:provenance">
-    <label>Provenance</label>
-    <description>A statement of any changes in ownership and custody of the resource since its
-      creation that are significant for its authenticity, integrity and interpretation.
+    <label>Происхождение</label>
+    <description>Указание любых изменений во владении ресурсом и его поддержке
+     со времени создания, которые значимы для достоверности, полноты и толкования
     </description>
   </element>
   <!-- ==================================================== -->
   <element name="dct:rightsHolder">
-    <label>Rights Holder</label>
-    <description>A person or organization owning or managing rights over the resource.</description>
+    <label>Правообладатель</label>
+    <description>Человек или организация, владеющие или управляющие правами над ресурсом</description>
   </element>
   <!-- ==================================================== -->
   <element name="ows:BoundingBox">
-    <label>Bounding box</label>
+    <label>Ограничивающая рамка</label>
   </element>
   <element name="ows:UpperCorner">
-    <label>Upper corner</label>
+    <label>Верхний угол</label>
   </element>
   <element name="ows:LowerCorner">
-    <label>Lower corner</label>
+    <label>Нижний угол</label>
   </element>
   <element name="crs">
-    <label>CRS</label>
+    <label>Система координат</label>
   </element>
 </labels>

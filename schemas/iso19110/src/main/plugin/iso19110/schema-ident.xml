@@ -31,11 +31,15 @@
   <appMinorVersionSupported>3.4.0</appMinorVersionSupported>
   <title xml:lang="en">Geographic information -- Methodology for feature cataloguing</title>
   <title xml:lang="fr">Information géographique -- Méthodologie de catalogage des entités</title>
+  <title xml:lang="ru">Географическая информация - Методология каталогизации пространственных объектов</title>
   <standardUrl xml:lang="en">
     http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=39965
   </standardUrl>
   <standardUrl xml:lang="fr">
     http://www.iso.org/iso/fr/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=39965
+  </standardUrl>
+  <standardUrl xml:lang="ru">
+    http://www.iso.org/iso/ru/iso_catalogue/catalogue_tc/catalogue_detail.htm?csnumber=39965
   </standardUrl>
   <depends>iso19139</depends>
   <schemaLocation>http://www.isotc211.org/2005/gfc http://www.isotc211.org/2005/gfc/gfc.xsd

@@ -23,120 +23,129 @@
   -->
 
 <strings>
-  <understandResource>Information about the dataset</understandResource>
-  <relatedResources>Related services and linked data</relatedResources>
-  <techInfo>Technical information</techInfo>
-  <contactInfo>Contact information</contactInfo>
-  <mdContactInfo>Metadata contact</mdContactInfo>
-  <refDate>Reference date</refDate>
-  <temporalRef>Temporal information</temporalRef>
-  <constraintInfo>Access constraint information</constraintInfo>
-  <xml_iso19139>Save this metadata as an ISO19139 XML file</xml_iso19139>
-  <xml_iso19139Tooai_dc>Save this metadata as an OAI Dublin Core XML file</xml_iso19139Tooai_dc>
+  <understandResource>Информация о наборе данных</understandResource>
+  <relatedResources>Связанные сервисы и данные</relatedResources>
+  <techInfo>Техническая информация</techInfo>
+  <contactInfo>Контактная информация</contactInfo>
+  <mdContactInfo>Контакт метаданных</mdContactInfo>
+  <refDate>Справочная дата</refDate>
+  <temporalRef>Временная информация</temporalRef>
+  <constraintInfo>Информация об ограничениях доступа</constraintInfo>
+  <xml_iso19139>Сохранить эти метаданные как XML-файл ISO19139 </xml_iso19139>
+  <xml_iso19139Tooai_dc>Сохранить эти метаданные как XML-файл OAI Dublin Core</xml_iso19139Tooai_dc>
 
   <!-- New strings added for the AngularJS editor -->
   <!-- View and tabs -->
-  <advanced>Full</advanced>
-  <default>Simple</default>
-  <simple>Simple</simple>
+  <advanced>Детальный вид</advanced>
+  <default>По умолчанию</default>
+  <simple>Сокращенный вид</simple>
   <inspire>INSPIRE</inspire>
   <inspire_sds>SDS</inspire_sds>
-  <overviews>Overviews</overviews>
-  <metadataInXML>XML</metadataInXML>
-  <providedBy>Provided by</providedBy>
-  <shareOnSocialSite>Share on social sites</shareOnSocialSite>
-  <viewMode>Views</viewMode>
 
-  <keywordFrom>Keywords - </keywordFrom>
-  <resource>Resource</resource>
+  <keywordFrom>Ключевые слова - </keywordFrom>
+  <resource>Ресурсы</resource>
   <xml>XML</xml>
-  <metadata>Metadata</metadata>
-  <identificationInfo>Identification</identificationInfo>
-  <distributionInfo>Distribution</distributionInfo>
-  <dataQualityInfo>Quality</dataQualityInfo>
-  <spatialRepresentationInfo>Spatial rep.</spatialRepresentationInfo>
-  <referenceSystemInfo>Ref. system</referenceSystemInfo>
-  <contentInfo>Content</contentInfo>
-  <portrayalCatalogueInfo>Portrayal</portrayalCatalogueInfo>
-  <metadataConstraints>Md. constraints</metadataConstraints>
-  <metadataMaintenance>Md. maintenance</metadataMaintenance>
-  <applicationSchemaInfo>Schema info</applicationSchemaInfo>
-  <noThesaurusName>Keywords</noThesaurusName>
-  <bboxesSection>Geographic coverage</bboxesSection>
-
+  <metadata>Метаданные</metadata>
+  <identificationInfo>Идентификация</identificationInfo>
+  <distributionInfo>Распространение</distributionInfo>
+  <dataQualityInfo>Качество</dataQualityInfo>
+  <spatialRepresentationInfo>Простр. представление</spatialRepresentationInfo>
+  <referenceSystemInfo>Система коорд.</referenceSystemInfo>
+  <contentInfo>Содержимое</contentInfo>
+  <portrayalCatalogueInfo>Символизация</portrayalCatalogueInfo>
+  <metadataConstraints>Ограничения МД</metadataConstraints>
+  <metadataMaintenance>Обновление МД</metadataMaintenance>
+  <applicationSchemaInfo>Инф. о схеме</applicationSchemaInfo>
+  <noThesaurusName>Ключевые слова</noThesaurusName>
+  <bboxesSection>Географическое покрытие</bboxesSection>
+  <overviews>Обзоры</overviews>
+  <metadataInXML>XML</metadataInXML>
+  <providedBy>Предоставлен</providedBy>
+  <shareOnSocialSite>Поделиться в социальных сетях</shareOnSocialSite>
+  <viewMode>Отображение</viewMode>
+  <linkToPortal>Доступ к порталу</linkToPortal>
+  <linkToPortal-help>Ознакомьтесь с порядком доступа к данным</linkToPortal-help>
+  <citationProposal>Предлагаемая ссылка</citationProposal>
+  <citationProposal-help>Предлагаемая ссылка генерируется автоматически, проверьте нет ли у автора метаданных каких-то специальных требований к ссылке.</citationProposal-help>
+  <associatedResources>Ассоциированные ресурсы</associatedResources>
+  
   <!-- XSD error translation -->
-  <invalidElement>Invalid element. Invalid content was found starting with element:</invalidElement>
-  <onElementOf>One of the following elements</onElementOf>
-  <isExpected>is expected.</isExpected>
-  <isNotComplete>is not complete.</isNotComplete>
-  <elementLocated>Parent element is</elementLocated>
-  <missingElement>Missing element. The content of element:</missingElement>
-  <invalidValue>Invalid or missing value.</invalidValue>
-  <notValidFor>is not a valid value for</notValidFor>
-  <xsdErrorIs>XSD error is:</xsdErrorIs>
-  <inElement>in element</inElement>
-  <enum1>Value</enum1>
-  <enum2>is not valid for the field</enum2>
-  <enum3>List of values is :</enum3>
+  <invalidElement>Неправильное содержимое найдено, начиная с этого элемента: </invalidElement>
+  <onElementOf>Один из следующих элементов </onElementOf>
+  <isExpected>ожидается. </isExpected>
+  <isNotComplete>не полно.</isNotComplete>
+  <elementLocated>Родительский элемент: </elementLocated>
+  <missingElement>Элемент не найден. Содержимое элемента: </missingElement>
+  <invalidValue>Значение не верно или не найдено.</invalidValue>
+  <notValidFor> - недопустимое значение для </notValidFor>
+  <xsdErrorIs>Ошибка XSD: </xsdErrorIs>
+  <inElement>в элементе </inElement>
+  <enum1>Значение</enum1>
+  <enum2>недопустимо для поля </enum2>
+  <enum3>Допустимые значения: </enum3>
 
   <!-- INSPIRE view labels and help -->
-  <url>Online resource</url>
-  <identifier>Resource identifier</identifier>
-  <rsIdentifier>Projection</rsIdentifier>
-  <referenceDate>Temporal information</referenceDate>
-  <creationDate>Creation date</creationDate>
-  <hierarchyLevel>Hierarchy level</hierarchyLevel>
-  <publicationDate>Publication date</publicationDate>
-  <revisionDate>Revision date</revisionDate>
-  <temporalRangeSection>Temporal extent</temporalRangeSection>
-  <beginPosition>Begin</beginPosition>
-  <endPosition>End</endPosition>
-  <conformity>Conformity</conformity>
-  <conformity_title>Title</conformity_title>
-  <conformity_date>Date</conformity_date>
-  <explanation>Explanation</explanation>
-  <pass>Conformity</pass>
-  <indeterminatePosition>Indeterminate position</indeterminatePosition>
-  <pointOfContact>Contact for the resource</pointOfContact>
-  <metadataPointOfContact>Contact for the metadata</metadataPointOfContact>
-  <organisationName>Organisation name</organisationName>
+  <url>Онлайн-ресурс</url>
+  <identifier>Идентификатор ресурса</identifier>
+  <rsIdentifier>Проекция</rsIdentifier>
+  <referenceDate>Временная информация</referenceDate>
+  <creationDate>Дата создания</creationDate>
+  <hierarchyLevel>Вид (иерархия) данных</hierarchyLevel>
+  <publicationDate>Дата публикации</publicationDate>
+  <revisionDate>Дата обновления</revisionDate>
+  <temporalRangeSection>Временной экстент</temporalRangeSection>
+  <beginPosition>Начало</beginPosition>
+  <endPosition>Конец</endPosition>
+  <conformity>Соответствие</conformity>
+  <conformity_title>Название</conformity_title>
+  <conformity_date>Дата</conformity_date>
+  <explanation>Пояснение</explanation>
+  <pass>Соответствие</pass>
+  <indeterminatePosition>Неопределенное положение</indeterminatePosition>
+  <pointOfContact>Контакт ресурса</pointOfContact>
+  <metadataPointOfContact>Контакт метаданных</metadataPointOfContact>
+  <organisationName>Название организации</organisationName>
   <electronicMailAddress>Email</electronicMailAddress>
-  <role>Role</role>
-  <encoding>Encoding</encoding>
-  <inspireTheme>INSPIRE themes</inspireTheme>
-  <inspireThemeURI>INSPIRE themes</inspireThemeURI>
-  <format>Format</format>
-  <format_version>Version</format_version>
-  <lineage>Lineage</lineage>
-  <spatialResolution>Spatial resolution (scale)</spatialResolution>
-  <spatialDistance>Spatial resolution (distance)</spatialDistance>
-  <accessConstraints>Access constraints</accessConstraints>
-  <useConstraints>Use constraints</useConstraints>
-  <useLimitation>Use limitation</useLimitation>
-  <add-resource-id>Compute resource identifier</add-resource-id>
-  <add-resource-idHelp>Compose the resource identifier using the catalog URL and the metadata
-    identifier (eg. http://www.organization.org/catalogue/5391bf69-44bc-4ea0-8cc0-6cf6c3bc81ae).
+  <role>Роль</role>
+  <encoding>Кодировка</encoding>
+  <inspireTheme>Темы INSPIRE</inspireTheme>
+  <inspireThemeURI>Темы INSPIRE</inspireThemeURI>
+  <format>Формат</format>
+  <format_version>Версия</format_version>
+  <format_specification>Спецификация</format_specification>
+  <lineage>Происхождение</lineage>
+  <spatialResolution>Пространственное разрешение (масштаб)</spatialResolution>
+  <spatialDistance>Пространственное разрешение (расстояние)</spatialDistance>
+  <accessConstraints>Ограничения доступа</accessConstraints>
+  <useConstraints>Ограничения на использование</useConstraints>
+  <useLimitation>Ограничения на область использования</useLimitation>
+  <add-resource-id>Вычислить идентификатор ресурса</add-resource-id>
+  <add-resource-idHelp>Сформировать идентификатор ресурса, используя URL каталога и идентификатор
+    метаданных (например, http://www.organization.org/catalogue/5391bf69-44bc-4ea0-8cc0-6cf6c3bc81ae).
   </add-resource-idHelp>
-  <add-extent-from-geokeywords>Compute extent from keyword</add-extent-from-geokeywords>
-  <add-extent-from-geokeywordsHelp>Analyze each keyword of type place and add matching extent.
+  <add-extent-from-geokeywords>Определить экстент по информации ключевых слов</add-extent-from-geokeywords>
+  <add-extent-from-geokeywordsHelp>Анализировать каждое ключевое слово типа "местоположение" и добавить соотв. экстент.
   </add-extent-from-geokeywordsHelp>
-  <classificationSection>Classification of data and services</classificationSection>
-  <temporalSection>Temporal reference</temporalSection>
-  <restrictionsSection>Restrictions on access and use</restrictionsSection>
-  <metadataSection>Metadata information</metadataSection>
-  <responsibleOrganisationSection>Responsible organization (s)</responsibleOrganisationSection>
-  <qualityAndValiditySection>Quality and validity</qualityAndValiditySection>
-  <spatialRepresentationType>Spatial representation type</spatialRepresentationType>
-  <topicCategory>Topic category code</topicCategory>
-  <metadataLanguage>Metadata language</metadataLanguage>
-  <inspireServiceTaxonomy>INSPIRE Service Taxonomy</inspireServiceTaxonomy>
-  <otherConstraints>Other constraints</otherConstraints>
-  <operatesOn>Coupled resource</operatesOn>
-  <extent>Geographic bounding box</extent>
-  <spatialExtent>Пространственная протяженность</spatialExtent>
-  <freeTextKeywords>Other keywords</freeTextKeywords>
+  <classificationSection>Классификация данных и сервисов</classificationSection>
+  <temporalSection>Временная ссылка</temporalSection>
+  <restrictionsSection>Запрет на доступ и использование</restrictionsSection>
+  <metadataSection>Информация о метаданных</metadataSection>
+  <responsibleOrganisationSection>Ответственная организация(и)</responsibleOrganisationSection>
+  <qualityAndValiditySection>Качество и достоверность</qualityAndValiditySection>
+  <spatialRepresentationType>Тип пространсвенного представления</spatialRepresentationType>
+  <topicCategory>Код категории темы</topicCategory>
+  <metadataLanguage>Язык метаданных</metadataLanguage>
+  <inspireServiceTaxonomy>Таксономия сервиса INSPIRE</inspireServiceTaxonomy>
+  <otherConstraints>Другие ограничения</otherConstraints>
+  <operatesOn>Связанный ресурс</operatesOn>
+  <extent>Геогр. охватывающая рамка</extent>
+  <spatialExtent>Пространственный экстент</spatialExtent>
+  
+  <freeTextKeywords>Другие ключевые слова</freeTextKeywords>
+  <resource_url>URL</resource_url>
+  <resource_protocol>Протокол</resource_protocol>
 
-  <addCrs>Projection</addCrs>
+  <addCrs>Проекция</addCrs>
   <addCrs4936>ETRS89-XYZ</addCrs4936>
   <addCrs4937>ETRS89-GRS80h</addCrs4937>
   <addCrs4258>ETRS89-GRS80</addCrs4258>
@@ -161,68 +170,72 @@
 
   <!-- String for INSPIRE SDS tab -->
 
-  <inspire_sds_cc1>Conformance class 1: invocable</inspire_sds_cc1>
-  <inspire_sds_cc2>Conformance class 2: interoperable</inspire_sds_cc2>
-  <inspire_sds_cc3>Conformance class 3: harmonized</inspire_sds_cc3>
+  <inspire_sds_cc1>Класс соответствия 1: ссылочный</inspire_sds_cc1>
+  <inspire_sds_cc2>Класс соответствия 2: совместимый</inspire_sds_cc2>
+  <inspire_sds_cc3>Класс соответствия 3: согласованный</inspire_sds_cc3>
 
-  <sds-category>Category</sds-category>
-  <inspire_add_pass>Add pass element</inspire_add_pass>
-  <sds-add-dataquality>Add DataQuality element</sds-add-dataquality>
-  <sds-add-dataqualityHelp>TG4: For each spatial data service, there shall be one and only one set
-    of quality information (dataQualityInfo element) scoped to “service”.
+  <sds-category>Категория</sds-category>
+  <inspire_add_pass>Добавить проходной элемент</inspire_add_pass>
+  <sds-add-dataquality>Добавить элемент DataQuality</sds-add-dataquality>
+  <sds-add-dataqualityHelp>TG4: Для каждого сервиса пространственных данных должен быть один и только один
+    набор информации о качестве (элемент dataQualityInfo).
   </sds-add-dataqualityHelp>
-  <sds-add-tech-spec>Add a technical specification</sds-add-tech-spec>
-  <sds-add-tech-specHelp>TG8: The Specification metadata element shall at least refer to or contain
-    one technical specification to which the invocable spatial data service fully conforms,
-    providing all the necessary technical elements, to actually invoke the service and enable its
-    usage.
+  <sds-add-tech-spec>Добавить техническую спецификацию</sds-add-tech-spec>
+  <sds-add-tech-specHelp>TG8: Спецификация элемента метаданных должна ссылаться на или содержать
+    одну техническую спецификацию, которой сервис пространственных данных полностью соответствует,
+    предоставляя все необходимые технические элементы для вызова сервиса и возможности его использования.
   </sds-add-tech-specHelp>
-  <sds-tech-spec>Technical specification</sds-tech-spec>
-  <conformity_desc>Tech spec title</conformity_desc>
-  <conformity_linkage>Tech spec URL</conformity_linkage>
+  <sds-tech-spec>Техническая спецификация</sds-tech-spec>
+  <conformity_desc>Название тех. спец.</conformity_desc>
+  <conformity_linkage>URL тех. спец.</conformity_linkage>
 
 
-  <sds-section-qos>Quality of Service</sds-section-qos>
-  <sds-add-qualityofservice>Add missing Quality of Service criteria</sds-add-qualityofservice>
-  <sds-add-qualityofserviceHelp>INSPIRE SDS requires three quality of service criteria to be
-    reported in the metadata: Availability, Performance and Capacity. This button will add the
-    missing criteria.
+  <sds-section-qos>Качество сервиса</sds-section-qos>
+  <sds-add-qualityofservice>Добавить отсутствующие критерии качества сервиса</sds-add-qualityofservice>
+  <sds-add-qualityofserviceHelp>INSPIRE SDS требует наличия трех критериев качества сервиса в метаданных:
+     Доступность, Производительность и Емкость. Эта кнопка добавляет отсутствующие критерии.
   </sds-add-qualityofserviceHelp>
-  <qos_measure>Measure:</qos_measure>
-  <qos_uom>UOM</qos_uom>
-  <qos_description>Description</qos_description>
-  <qos_value>Value</qos_value>
-  <sds-section-crs>Coordinate reference system</sds-section-crs>
+  <qos_measure>Измерение:</qos_measure>
+  <qos_uom>Ед.измерения</qos_uom>
+  <qos_description>Описание</qos_description>
+  <qos_value>Значение</qos_value>
+  <sds-section-crs>Система координат</sds-section-crs>
 
-  <sds-fix-category>Fix the Category element</sds-fix-category>
-  <sds-fix-categoryHelp>(Rec1) Replace gco:CharacterString with gmx:Anchor in the description
-    metadata element.
+  <sds-fix-category>Исправить элемент категории</sds-fix-category>
+  <sds-fix-categoryHelp>(Rec1) Заменить gco:CharacterString на gmx:Anchor в описании
+    элемента метаданных.
   </sds-fix-categoryHelp>
 
-  <sds-accesspoint>Access Point URL</sds-accesspoint>
-  <sds-add-accesspoint>Add Access Point</sds-add-accesspoint>
+  <sds-accesspoint>Точка доступа URL</sds-accesspoint>
+  <sds-add-accesspoint>Добавить точку доступа</sds-add-accesspoint>
 
-  <sds-endpoint>Endpoint URL</sds-endpoint>
-  <sds-add-endpoint>Add Endpoint</sds-add-endpoint>
+  <sds-endpoint>Конечная точка URL</sds-endpoint>
+  <sds-add-endpoint>Добавить конечную точку</sds-add-endpoint>
 
-  <sds-addNoConstraints>No Limitation</sds-addNoConstraints>
-  <sds-addNoConstraintsHelp>Add an element that documents that there are no limitation for this
-    service.
+  <sds-addNoConstraints>Нет ограничений</sds-addNoConstraints>
+  <sds-addNoConstraintsHelp>Добавить элемент, который указывает на отсутствие ограничений для этого сервиса.
   </sds-addNoConstraintsHelp>
-  <sds-addUnknownConstraints>Unknown Limitation</sds-addUnknownConstraints>
-  <sds-addConstraints>Customizable constraints</sds-addConstraints>
+  <sds-addUnknownConstraints>Неизвестные ограничения</sds-addUnknownConstraints>
+  <sds-addConstraints>Настраиваемые ограничения</sds-addConstraints>
 
   <sds>
-    <noConditionsApply>No conditions apply</noConditionsApply>
-    <conditionsUnknown>Conditions unknown</conditionsUnknown>
+    <noConditionsApply>Нет применимых условий</noConditionsApply>
+    <conditionsUnknown>Неизвестные условия</conditionsUnknown>
   </sds>
 
-  <sds-limitation>Limitation</sds-limitation>
+  <sds-limitation>Ограничения</sds-limitation>
 
-  <sds-section-custodian>Responsible custodian</sds-section-custodian>
-  <sds-addOperation>Add Operation</sds-addOperation>
+  <sds-section-custodian>Ответственный хранитель</sds-section-custodian>
+  <sds-addOperation>Добавить операцию</sds-addOperation>
 
-  <trueValue>Yes</trueValue>
-  <falseValue>No</falseValue>
-  <nilValue>Undefined</nilValue>
+  <trueValue>Да</trueValue>
+  <falseValue>Нет</falseValue>
+  <nilValue>Неопределено</nilValue>
+  <logo>логотип</logo>
+  <overview>обзор</overview>
+  <thumbnail>иконка</thumbnail>
+  <north>Север</north>
+  <east>Восток</east>
+  <south>Юг</south>
+  <west>Запад</west>
 </strings>

@@ -44,14 +44,16 @@
     <msg id="b" xml:lang="dut">). Probeer metadata dekking te berekenen met behulp van de opgenomen trefwoorden.</msg>
     <msg id="a" xml:lang="ita">Il campo parola chiave contiene un termine geografico (es.</msg>
     <msg id="b" xml:lang="ita">). Prova a impostare l'estensione geografica usando il dati nel thesaurus.</msg>
+    <msg id="a" xml:lang="rus">Ключевое слово описывант местоположение -</msg>
+    <msg id="b" xml:lang="rus">). Можно попытаться определить экстент по тезаурусу.</msg>
   </xsl:variable>
 
   <!-- GeoNetwork base url -->
-  <xsl:param name="siteUrl" select="'http://localhost:8080/geonetwork/srv/eng'"/>
+  <xsl:param name="siteUrl" select="'http://localhost:8080/geonetwork/srv/rus'"/>
   <xsl:param name="gurl" select="$siteUrl"/>
 
   <!-- The UI language. Thesaurus search is made according to GUI language -->
-  <xsl:param name="guiLang" select="'eng'"/>
+  <xsl:param name="guiLang" select="'rus'"/>
   <xsl:param name="lang" select="$guiLang"/>
 
   <!-- Replace or not existing extent -->
@@ -61,7 +63,7 @@
   <xsl:variable name="replaceMode"
                 select="geonet:parseBoolean($replace)"/>
   <xsl:variable name="serviceUrl"
-                select="concat($gurl, 'keywords?pNewSearch=true&amp;pTypeSearch=2&amp;pKeyword=')"/>
+                select="concat(substring($gurl, 1, string-length($gurl)-4), 'api/registries/vocabularies/search?_content_type=xml&amp;q=')"/>
 
 
   <xsl:template name="list-add-extent-from-geokeywords">
@@ -241,7 +243,7 @@
       <xsl:variable name="keyword" select="document(concat($serviceUrl, encode-for-uri($word)))"/>
       <!-- It should be one but if one keyword is found in more
           thant one thesaurus, then each will be processed.-->
-      <xsl:for-each select="$keyword/response/descKeys/keyword">
+      <xsl:for-each select="$keyword/response/keyword[1]">
         <xsl:if test="geo">
           <xsl:choose>
             <xsl:when test="$srv">
