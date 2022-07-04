@@ -98,6 +98,11 @@
   </div>
   <!--Bottom right buttons - Navigation-->
   <div class="tools control-tools">
+    <button class="btn btn-default hidden-xs" ng-click="fullScreenMap()"
+        aria-label="{{'Fullscreen' | translate}}">
+      <span class="fa fa-arrows-alt"></span>
+      <span role="tooltip" data-translate="">Fullscreen</span>
+    </button>
     <button class="btn btn-default" type="submit" data-ng-click="zoom(map,1)"
             aria-label="{{'ZoomIn' | translate}}">
       <span class="fa fa-plus"></span>
@@ -110,7 +115,7 @@
     </button>
     <button class="btn btn-default" type="submit" data-ng-click="zoomToMaxExtent(map)"
             aria-label="{{'ZoomToMapMaxExtent' | translate}}">
-      <span class="fa fa-arrows-alt"></span>
+      <span class="fa globe"></span>
       <span role="tooltip" data-translate="">ZoomToMapMaxExtent</span>
     </button>
     <button class="btn btn-default btn-3d" type="submit"

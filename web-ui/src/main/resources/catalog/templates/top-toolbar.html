@@ -5,7 +5,7 @@
            alt="{{'siteLogo' | translate}}"
            data-ng-src="{{gnUrl}}../images/logos/{{info['node/id'] || info['system/site/siteId']}}.png?random{{info['system/site/lastUpdate']}}"/>
     </a>
-    <a class="hidden-sm hidden-md hidden-lg btn btn-link pull-left"
+    <a class="hidden-xs hidden-sm hidden-md hidden-lg btn btn-link pull-left"
        data-gn-active-tb-item="{{gnCfg.mods.home.appUrl}}">
       <span class="gn-name"
             data-ng-class="authenticated && user.isEditorOrMore() ? 'gn-truncate' : ''"
@@ -25,6 +25,15 @@
     </button>
   </div>
   <div id="navbar" class="navbar-collapse collapse">
+    <div class="navbar-form navbar-right language-switcher">
+      <!-- <span class="gn-menuheader-xs visible-xs"
+            data-ng-if="!authenticated && service !== 'catalog.signin' && service !== 'new.account' && (!shibbolethEnabled || (shibbolethEnabled && !shibbolethHideLogin))"
+            data-translate="">language</span> -->
+      <div data-gn-language-switcher="lang"
+           data-langs="langs"
+           data-lang-labels="langLabels">
+      </div>
+    </div>
     <ul class="nav navbar-nav gn-menu-xs" role="menu">
       <li class="clearfix hidden-xs" data-ng-if="gnCfg.mods.home.enabled">
         <a class="pull-left gn-logo-link"
@@ -45,14 +54,14 @@
         <a data-gn-active-tb-item="{{gnCfg.mods.search.appUrl}}"
           title="{{'search' | translate}}">
           <i class="fa fa-fw fa-search"></i>
-          <span translate class="hidden-sm">search</span>
+          <span translate class="hidden-xs">search</span>
         </a>
       </li>
       <li class="gn-menuitem-xs" data-ng-if="gnCfg.mods.map.enabled">
         <a data-gn-active-tb-item="{{isExternalViewerEnabled ? externalViewerUrl : gnCfg.mods.map.appUrl}}"
           title="{{'map' | translate}}">
           <i class="fa fa-fw fa-globe"></i>
-          <span translate class="hidden-sm">makeYourMap</span>
+          <span translate class="hidden-xs">makeYourMap</span>
           <span data-gnv-layer-indicator=""/>
         </a>
       </li>
@@ -64,7 +73,7 @@
            class="dropdown-toggle gn-menuheader-xs"
            role="button" aria-expanded="false">
           <i class="fa fa-fw fa-pencil"></i>
-          <span translate class="hidden-sm">contribute</span>
+          <span translate class="hidden-xs">contribute</span>
         </a>
         <ul class="dropdown-menu gn-menu-xs clearfix" role="list">
           <li class="gn-menuitem-xs" role="menuitem">
@@ -106,7 +115,7 @@
            class="dropdown-toggle gn-menuheader-xs"
            role="button" aria-expanded="false">
           <i class="fa fa-fw fa-wrench"></i>
-          <span translate class="hidden-sm">adminConsole</span>
+          <span translate class="hidden-xs">adminConsole</span>
         </a>
         <ul data-ng-if="user.isUserAdmin()" class="dropdown-menu gn-menu-xs" role="list">
           <li class="gn-menuitem-xs" role="menuitem">
@@ -137,16 +146,6 @@
       </li>
       <li gn-static-pages-list-viewer data-section="top" data-language="{{lang}}" />
     </ul>
-
-    <div class="navbar-form navbar-right language-switcher">
-      <span class="gn-menuheader-xs visible-xs"
-            data-ng-if="!authenticated && service !== 'catalog.signin' && service !== 'new.account' && !isShowLoginAsLink && !isDisableLoginForm"
-            data-translate="">language</span>
-      <div data-gn-language-switcher="lang"
-           data-langs="langs"
-           data-lang-labels="langLabels">
-      </div>
-    </div>
 
     <ul data-ng-if="gnCfg.mods.signin.enabled"
         class="nav navbar-nav navbar-right username-dropdown">

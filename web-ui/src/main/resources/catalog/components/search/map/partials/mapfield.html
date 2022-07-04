@@ -1,4 +1,4 @@
-<div ol-map="map">
+<div class="ol-map-dutch" ol-map="map">
   <div class="btn-group-vertical">
     <!--<button class="btn btn-default"
             data-ng-click="gnMap.zoom(map, 1)">
@@ -8,6 +8,13 @@
             data-ng-click="gnMap.zoom(map, -1)">
       <i class="fa fa-minus"></i>
     </button>-->
+    <button data-ng-click="fixedMiniMapVisibl()"
+        type="button"
+        title="{{'Minimize' | translate}}"
+        aria-label="{{'Minimize' | translate}}"
+        class="hidden-xs btn btn-default fixed-mini-map-visib-toggle">
+        <i class="fa fa-angle-down" aria-hidden="true"></i>
+    </button>
     <button data-ng-click="location.setMap()"
             data-ng-if="isMapViewerEnabled && !isExternalViewerEnabled"
             type="button"
@@ -15,6 +22,14 @@
             aria-label="{{'openLargeMap' | translate}}"
             class="btn btn-default">
       <i class="fa fa-globe"></i>
+    </button>
+    <button data-ng-click="maxSizeMap()"
+            data-ng-if="isMapViewerEnabled && !isExternalViewerEnabled"
+            type="button"
+            title="{{'enlargeMap' | translate}}"
+            aria-label="{{'enlargeMap' | translate}}"
+            class="btn btn-default max-size-map-toggle">
+            <i class="fa fa-expand" aria-hidden="true"></i>
     </button>
   </div>
 
