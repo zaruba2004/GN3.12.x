@@ -140,6 +140,8 @@
       <item facet="type" translator="codelist:gmd:MD_ScopeCode"/>
       <item facet="mdActions"/>
       <item facet="topicCat" translator="codelist:gmd:MD_TopicCategoryCode" max="20"/>
+      <item facet ="category" plural="categories" indexKey="_cat" max="99" sortBy="value"
+            translator="db:org.fao.geonet.repository.MetadataCategoryRepository:findOneByName"/>
       <item facet="inspireThemeURI" sortBy="value" sortOrder="asc" max="35"
             translator="term:http://inspire.ec.europa.eu/theme"/>
       <!--<item facet="inspireTheme" sortBy="value" sortOrder="asc" max="35"/>-->
@@ -180,7 +182,7 @@
             translator="db:org.fao.geonet.repository.GroupRepository:findOne:int"/>
       <item facet="recordOwner" max="45" sortBy="value"/>
       <item facet="publishedForGroup" max="199" sortBy="value"
-            translator="db:org.fao.geonet.repository.GroupRepository:findByName"/>
+            translator="db:org.fao.geonet.repository.GroupRepository:findOneByName"/>
       <item facet="standard" max="15" sortBy="value"/>
       <item facet="isHarvested" max="2" sortBy="value" translator="apploc:"/>
       <item facet="metadataType" max="3" sortBy="value" translator="apploc:recordType-"/>
@@ -193,6 +195,8 @@
     <summaryType name="hits">
       <item facet="type" translator="codelist:gmd:MD_ScopeCode"/>
       <item facet="topicCat" translator="codelist:gmd:MD_TopicCategoryCode" max="20"/>
+      <item facet="category" plural="categories" indexKey="_cat" max="99" sortBy="value"
+            translator="db:org.fao.geonet.repository.MetadataCategoryRepository:findOneByName"/>
       <item facet="inspireTheme" sortBy="value" sortOrder="asc" max="35"/>
       <item facet="inspireThemeWithAc" sortBy="value" sortOrder="asc" max="35"/>
       <item facet="inspireThemeURI" sortBy="value" sortOrder="asc" max="35"
