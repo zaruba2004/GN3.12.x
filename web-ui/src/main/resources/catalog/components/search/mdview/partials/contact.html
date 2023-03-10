@@ -1,4 +1,3 @@
-<div>
   <div class="gn-contact" data-ng-if="mode == 'default'"
        data-ng-repeat="c in mdContacts track by $index">
     <h3>
@@ -112,8 +111,9 @@
           {{key}}<br/>
         </span>
         <ul>
-          <li ng-repeat="(roles, contactGroupByRole) in contactGroupByAddress | groupBy:'roles'">
-            {{roles }}:<br/>
+          <li style="list-style: none" ng-repeat="(roles, contactGroupByRole) in contactGroupByAddress | groupBy:'roles'">
+            &nbsp;<i class="fa fa-user" aria-hidden="true"></i>
+            &nbsp;{{roles | translate}}:<br/>
             <span data-ng-repeat="c in contactGroupByRole track by $index">
               <span data-ng-if="c.email != ''">
                 <i class="fa fa-fw fa-envelope"></i>
@@ -140,4 +140,51 @@
     </address>
   </div>
 
-</div>
+  <!-- Group by organisation/role format dutch -->
+  <tr class="gn-contact" data-ng-if="mode == 'org-role-dutch'"
+  data-ng-repeat="(org, contactByOrgRole) in mdContactsByOrgRole">
+    <td>
+        <strong data-ng-if="::orgWebsite[org]">
+          <i class="fa fa-fw fa-link"></i>
+          <a data-ng-href="{{::orgWebsite[org]}}">{{org}}</a><br/>
+        </strong>
+        <strong data-ng-if="::!orgWebsite[org]">
+          {{org}}
+        </strong>
+    </td>
+    <td>        
+      <ul>
+        <li ng-repeat="(roles, contactGroupByRole) in contactByOrgRole | groupBy:'roles'">
+          &nbsp;<i class="fa fa-user" aria-hidden="true"></i>
+          &nbsp;{{roles | translate}}<br/> 
+          <span data-ng-repeat="c in contactGroupByRole track by $index">
+            <span data-ng-if="c.email != ''">                
+              <a href="mailto:{{c.email}}">
+                <!-- <span data-ng-hide="c.name">{{c.email}}</span> -->
+                <span data-ng-show="c.name">{{c.name}}</span>
+                <span data-ng-show="c.position">({{c.position}})</span>
+              </a>
+            </span>
+            <span data-ng-if="c.email === ''">{{c.name}}
+              <span data-ng-show="c.position">({{c.position}})</span>
+            </span>              
+            <span data-ng-if="!$last">,</span>
+          </span>           
+        </li>
+      </ul>
+    </td>
+    <td>      
+      <ul>
+        <li>
+          <span data-ng-repeat="c in contactByOrgRole track by $index">              
+            <i class="fa fa-fw fa-phone" data-ng-if="c.phone != ''"></i>
+            <a href="tel:{{c.phone}}"
+                data-ng-if="c.phone != ''">
+              {{c.phone}}
+            </a>
+            <span data-ng-if="!$last">,</span>
+          </span>
+        </li>
+      </ul>
+    </td>
+  </tr>

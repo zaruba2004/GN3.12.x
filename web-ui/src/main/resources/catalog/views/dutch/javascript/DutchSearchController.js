@@ -58,6 +58,10 @@
                 return suggestService.getAnySuggestions(val);
             };
 
+            /* Default advanced search form template */
+            $scope.advancedSearchTemplate = gnSearchSettings.advancedSearchTemplate ||
+              '../../catalog/views/default/templates/advancedSearchForm/defaultAdvancedSearchForm.html';
+
             $scope.keywordsOptions = {
                 mode: 'remote',
                 remote: {

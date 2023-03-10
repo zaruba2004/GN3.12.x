@@ -127,7 +127,6 @@ module.controller('gnsSearchTopEntriesController', [
       var viewerMap = gnSearchSettings.viewerMap;
       var searchMap = gnSearchSettings.searchMap;
       $scope.isFullScreenMap = false //Big size in page map
-      
       $scope.modelOptions = angular.copy(gnGlobalSettings.modelOptions);
       $scope.modelOptionsForm = angular.copy(gnGlobalSettings.modelOptions);
       $scope.isFilterTagsDisplayedInSearch = gnGlobalSettings.gnCfg.mods.search.isFilterTagsDisplayedInSearch;
@@ -231,7 +230,6 @@ module.controller('gnsSearchTopEntriesController', [
         $scope.fixedMiniMap = !$scope.fixedMiniMap
         $('button.fixed-mini-map-visib-toggle > i').toggleClass('fa-angle-down fa-angle-up');
         updateSizeSearchMap();
-        console.log("view")
       };
 
       $scope.fullScreenMap = function() {        

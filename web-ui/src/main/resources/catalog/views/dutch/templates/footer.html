@@ -5,7 +5,7 @@
       <div class="row">
         <!-- block 1 -->
         <div class="col-sm-12 gn-nopadding-left">
-          <ul class="nav navbar-nav hidden-xs">
+          <ul class="nav navbar-nav hidden-xs" ng-show="::getApplicationInfoVisible()">
             <li class="gn-footer-text">
               <span data-translate=""
                     data-translate-values="{platform: '{{info['system/platform/name']}}', version: '{{info['system/platform/version']}}', subversion: '{{info['system/platform/subVersion']}}'}">

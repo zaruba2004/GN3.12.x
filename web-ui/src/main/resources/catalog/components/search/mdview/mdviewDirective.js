@@ -198,7 +198,7 @@
           mode: '@gnMode'
         },
         link: function(scope, element, attrs, controller) {
-          if (['default', 'role', 'org-role'].indexOf(scope.mode) == -1) {
+          if (['default', 'role', 'org-role', 'org-role-dutch'].indexOf(scope.mode) == -1) {
             scope.mode = 'default';
           }
 
@@ -247,7 +247,7 @@
                   _.groupBy(contactsWithAggregatedRoles, function(c) {
                     return c.roles;
                   });
-              } else if (scope.mode == 'org-role') {
+              } if (scope.mode == 'org-role') {
                 /**
                  * Contacts format:
                  *
@@ -257,6 +257,24 @@
                * }
                  *
                  */
+                scope.orgWebsite = {};
+                scope.mdContactsByOrgRole = _.groupBy(scope.mdContacts,
+                  function(contact) {
+                    if (contact.website !== '') {
+                     scope.orgWebsite[contact.org] = contact.website;
+                    }
+                    return contact.org;
+                  });
+
+                for (var key in scope.mdContactsByOrgRole) {
+                  var value = scope.mdContactsByOrgRole[key];
+
+                  var contactsByOrgAndMailOrName = groupByOrgAndMailOrName(value);
+
+                  scope.mdContactsByOrgRole[key] =
+                    aggregateRoles(contactsByOrgAndMailOrName);
+                }
+              } else if (scope.mode == 'org-role-dutch') {                
                 scope.orgWebsite = {};
                 scope.mdContactsByOrgRole = _.groupBy(scope.mdContacts,
                   function(contact) {

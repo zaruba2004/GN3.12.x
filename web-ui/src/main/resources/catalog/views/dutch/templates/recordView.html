@@ -368,7 +368,7 @@
                   </div>
                 </div>
 
-                <h2>Metadata informatie</h2>
+                <h2 data-translate="">MetadataInformatie</h2>
                 <!--
                 Metadata informatie:
                 - Metadata unieke identifier
@@ -426,12 +426,70 @@
               <div role="tabpanel" class="tab-pane" id="contact"
                    data-ng-class="{active: currentTabMdView === 'contact'}"
                    data-ng-show="currentTabMdView === 'contact'">
-                <div data-ng-repeat="cntct in mdView.current.record.responsibleParty track by $index">
+
+                   <!-- <h2>Пробная версия Контакт</h2>
+                   <table class="table table-striped">
+                    <tbody>
+                      <tr data-ng-if="mdView.current.record.getAllContacts().resource && mdView.current.record.getAllContacts().resource.length > 0">
+                        <th data-translate="">resourceContact</th>
+                        <td>
+                          <div data-gn-metadata-contacts="mdView.current.record.getAllContacts().resource" data-gn-mode="org-role-dutch"></div>
+                        </td>
+                      </tr>
+                      <tr data-ng-if="mdView.current.record.getAllContacts().metadata && mdView.current.record.getAllContacts().metadata.length > 0">
+                        <th data-translate="">metadataInformation</th>
+                        <td>
+                          <div data-gn-metadata-contacts="mdView.current.record.getAllContacts().metadata" data-gn-mode="org-role-dutch" />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table> -->
+
+                  <div data-ng-if="mdView.current.record.getAllContacts().resource && mdView.current.record.getAllContacts().resource.length > 0 || mdView.current.record.getAllContacts().metadata && mdView.current.record.getAllContacts().metadata.length > 0">
+                    <!-- <h2>Новая версия Контакт</h2> -->
+                    <h2 data-translate="">resourceContact</h2>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <td data-translate="">mdContactSource</td>
+                            <td data-translate="">mdContactRole</td>
+                            <td data-translate="">mdPhone</td>
+                          </tr>
+                        </thead>
+                      <tbody data-gn-metadata-contacts="mdView.current.record.getAllContacts().resource" 
+                      data-gn-mode="org-role-dutch"></tbody>   
+                      <tbody data-ng-class="mdView.current.record.getAllContacts().resource.length %2==0 ? '' : 'tabl-tbody-even'" data-gn-metadata-contacts="mdView.current.record.getAllContacts().metadata" 
+                      data-gn-mode="org-role-dutch"></tbody>                   
+                    </table>
+                  </div>
+
+                   <!-- <h2>Версия Контакт Default</h2>
+
+                   <table class="table table-striped">
+                    <tbody>
+                      <tr data-ng-if="mdView.current.record.getAllContacts().resource && mdView.current.record.getAllContacts().resource.length > 0">
+                        <th data-translate="">resourceContact</th>
+                        <td>
+                          <div data-gn-metadata-contacts="mdView.current.record.getAllContacts().resource" data-gn-mode="org-role"></div>
+                        </td>
+                      </tr>
+                      <tr data-ng-if="mdView.current.record.getAllContacts().metadata && mdView.current.record.getAllContacts().metadata.length > 0">
+                        <th data-translate="">metadataInformation</th>
+                        <td>
+                          <div data-gn-metadata-contacts="mdView.current.record.getAllContacts().metadata" data-gn-mode="org-role" />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table> -->
+
+                <!-- <h2>Версия Контакт Dutch</h2>
+                  
+                <div data-ng-repeat="cntct in mdView.current.record.responsibleParty track by $index">       
 
                   <h2 class="text-capitalize">
-                    <span data-ng-show="(cntct|split:'|':1) !== 'resource'"> {{(cntct|split:'|':1)|translate}}</span>
-                    <span data-ng-show="(cntct|split:'|':1) === 'resource'"> {{mdView.current.record.type[0]}}</span>
                     <span data-translate="">contact</span>
+                    <span data-ng-show="(cntct|split:'|':1) !== 'resource'"> из {{(cntct|split:'|':1)|translate}}</span>
+                    <span data-ng-show="(cntct|split:'|':1) === 'resource'"> из {{mdView.current.record.type[0]}}</span>                    
                   </h2>
 
                   <div class="row" data-ng-show="{{cntct.split('|')[5]!=''}}">
@@ -472,7 +530,7 @@
                       <a href="{{cntct|split:'|':11}}" target="_blank">{{cntct|split:'|':11}}</a>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
               <!-- /.tab-pane -->
 

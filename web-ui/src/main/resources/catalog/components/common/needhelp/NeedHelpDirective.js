@@ -58,9 +58,10 @@
               'https://geonetwork-opensource.org/manuals/trunk/';
 
           var testAndOpen = function(url) {
+            // window.open(url);
             var defer = $q.defer();
             $http.head(url).then(function(data) {
-              window.open(url, 'gn-documentation');
+              window.open(url, 'gn-documentation');              
               defer.resolve(data);
             }, function(data) {
               gnAlertService.addAlert({
@@ -68,13 +69,15 @@
                 type: 'warning'
               });
               defer.reject(data);
+              // console.log(data)
             });
             return defer.promise;
           };
 
           scope.showHelp = function() {
             var page = attrs.gnNeedHelp;
-            var helpPageUrl = helpBaseUrl + gnGlobalSettings.lang + '/' + page;
+            var transtateGoogle = 'https://translate.google.com/translate?hl=en&sl=en&tl=ru&u='
+            var helpPageUrl = helpBaseUrl + 'en/' + page;
             testAndOpen(helpPageUrl).then(function() {}, function() {
               testAndOpen( helpBaseUrl + 'en/' + page)
             });

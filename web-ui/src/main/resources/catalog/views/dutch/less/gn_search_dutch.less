@@ -527,6 +527,74 @@
     padding: 15px 10px 15px 10px;
     margin-bottom: -20px;
 
+    // advanced search
+.gn-search-filter {
+  .nav-pills li {
+    display: block;
+  }
+  .form-group {
+    margin-bottom: 0;
+  }
+  .btn-link {
+    padding-left: 0;
+    font-size: 14px;
+  }
+  .control-label {
+    padding: 3px 0 2px 0;
+    display: inline;
+    text-align: left;
+    .control-label-span {
+      display: block;
+      margin-bottom: 2px;
+      margin-top: 3px;
+    }
+  }
+  .bootstrap-tagsinput {
+    padding-top: 6px;
+    padding-bottom: 5px;
+    .tagsinput-trigger {
+      top: 34px;
+      right: 25px;
+    }
+    .tagsinput-clear {
+      right: 20px;
+      top: 0px;
+    }
+    .tag {
+      white-space: normal;
+      display: inline-flex;
+      text-align: left;
+      line-height: 1.5em;
+      font-weight: normal;
+      margin-bottom: 3px;
+    }
+    .tt-menu {
+      .tt-dataset {
+        .tt-suggestion {
+          &:hover {
+            cursor: pointer;
+            background-color: @dropdown-link-hover-bg;
+          }
+        }
+      }
+    }
+  }
+  .gn-search-filter-datepicker {
+    margin-bottom: 10px;
+    .col-md-6 {
+      padding-left: 0;
+      @media (min-width: 400px) and (max-width: @screen-sm-max) {
+        width: 50%;
+        float: left;
+      }
+      @media (max-width: 400px) {
+        padding-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
     // ---- tags input for advanced search
     .bootstrap-tagsinput {
       padding: 7px 12px 7px 6px;

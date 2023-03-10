@@ -1428,6 +1428,8 @@
     "hopCountHelp": "Управление максимальным количеством переходов (по умолчанию 2), прежде чем поиск будет завершен",
     "ui-showSocialBarInFooter": "Показать панель соцсетей",
     "ui-showSocialBarInFooter-help": "Показать панель кнопок с логотипами соцсетей (Facebook, Twitter и т. Д.) в нижнем колонтитуле GeoNetwork",
+    "ui-showApplicationInfoAndLinksInFooter": "Показать версию GeoNetwork и ссылки",
+    "ui-showApplicationInfoAndLinksInFooter-help": "Показывать версию приложения и ссылки в нижнем колонтитуле страницы каталога",
     "ui-fluidLayout": "Контейнер Главной страницы",
     "ui-fluidLayout-help": "Если включено, шаблон страницы распространяется на всю ширину экрана, в противном случае, - имеет фиксированную ширину",
     "ui-fluidEditorLayout": "Контейнер страницы Редактора",

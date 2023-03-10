@@ -88,6 +88,32 @@
   }
   // catalog tab
   .gn-metadata-display {
+    #contact {
+      .table-striped {
+        tr {
+          border: 1px solid #ddd;
+          td {
+            padding-left: 8px;
+            width: 40%;
+            ul li {
+              list-style: none;
+            }
+          }
+          td :last-child {
+            width: 20%;
+          }
+        }        
+        tbody + tbody {
+          border-top: 1px solid #ddd;
+        }
+        .tabl-tbody-even tr :nth-of-type(even) {
+          background-color: #f9f9f9;
+        }
+        .tabl-tbody-even tr :nth-of-type(odd) {
+          background-color: white;
+        }
+      }
+    }
     #catalog {
       .table-striped {
         td {
@@ -199,7 +225,11 @@
     a {
       color:white;
       :hover {
-        color:#eef;
+        color:#0075a3;
+        background: #eeeeee;
+        line-height: 1.428571429;
+        border: 1px solid transparent;
+        border-radius: 3px 3px 0 0;
       }
       @media (max-width: 767px) {
         font-size: 20px

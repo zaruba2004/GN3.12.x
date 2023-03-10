@@ -243,7 +243,7 @@
       <xsl:variable name="keyword" select="document(concat($serviceUrl, encode-for-uri($word)))"/>
       <!-- It should be one but if one keyword is found in more
           thant one thesaurus, then each will be processed.-->
-      <xsl:for-each select="$keyword/response/keyword[1]">
+      <xsl:for-each select="$keyword/response/keyword">
         <xsl:if test="geo">
           <xsl:choose>
             <xsl:when test="$srv">
