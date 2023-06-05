@@ -1456,7 +1456,7 @@
     <db.config.file>../config-db/${db.type}.xml</db.config.file>
     <db.host>#{systemEnvironment['GEONETWORK_DB_HOST']?:'localhost'}</db.host>
     <db.port>#{systemEnvironment['GEONETWORK_DB_PORT']?:5432}</db.port>
-    <db.name>#{systemEnvironment['GEONETWORK_DB_NAME']?:'gndbtest12'}</db.name>
+    <db.name>#{systemEnvironment['GEONETWORK_DB_NAME']?:'gndb'}</db.name>
     <db.username>#{systemEnvironment['GEONETWORK_DB_USERNAME']?:'postgre'}</db.username>
     <db.password>#{systemEnvironment['GEONETWORK_DB_PASSWORD']?:'rootadmin'}</db.password>
     <db.connectionProperties>#{systemEnvironment['GEONETWORK_DB_CONNECTION_PROPERTIES']}</db.connectionProperties>

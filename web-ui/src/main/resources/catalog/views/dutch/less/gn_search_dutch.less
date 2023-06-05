@@ -26,6 +26,15 @@
   }
 }
 
+.gn-row-info {
+  padding: 30px 20px 40px 20px;
+  .nav-pills {
+    text-align: left !important;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+}
+
 .gn-search-page {
   clear: both;
   box-shadow: 1px 1px 15px #dddcdc;
@@ -41,14 +50,21 @@
     margin-right: 0;
   }
   .nav-pills {
-    margin-bottom: 1em;
+    // margin-bottom: 1em;
     text-align: center;
+    li.active > a {
+      background-color: #DDC48E;
+      color: white;
+    }
     li {
       display: inline-block;
       float: none;
       &:hover {
         cursor: pointer;
       }
+      a {
+        color: black;
+      }      
     }
     .badge {
       margin-right: 5px;
